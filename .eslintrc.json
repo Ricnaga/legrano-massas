@@ -1,7 +1,9 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true,
+    "node": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -44,12 +46,22 @@
     "react/jsx-props-no-spreading": "off",
     "react/jsx-no-bind": "off",
     "react/require-default-props": "off",
+    "react/react-in-jsx-scope": "off",
     "no-shadow": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "React"
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
       "typescript": {}
+    },
+    "react": {
+      "version": "detect"
     }
   }
 }
