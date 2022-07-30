@@ -1,14 +1,13 @@
-import React from 'react';
-import { Button } from '@mui/material';
-import { MuiProvider } from './application/design/mui';
 import { RouterProvider } from './application/routes';
+import { MuiProvider } from './application/theme/mui';
+import { Topbar } from './shared/components/Topbar';
 
 export function App() {
   return (
-    <RouterProvider>
-      <MuiProvider>
-        <Button>Children</Button>
-      </MuiProvider>
-    </RouterProvider>
+    <MuiProvider>
+      <RouterProvider>
+        <Topbar />
+      </RouterProvider>
+    </MuiProvider>
   );
 }
