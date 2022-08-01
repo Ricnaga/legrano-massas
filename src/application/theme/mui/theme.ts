@@ -57,16 +57,16 @@ const lightTheme: ThemeOptions = {
       fontWeight: 400,
     },
     h6: {
-      fontSize: '1.2rem',
+      fontSize: '1.4rem',
       fontWeight: 400,
     },
     body1: {
-      fontSize: '1.2rem',
-      fontWeight: 400,
+      fontSize: '1.36rem',
+      fontWeight: 500,
     },
     body2: {
-      fontSize: '1rem',
-      fontWeight: 400,
+      fontSize: '1.2rem',
+      fontWeight: 500,
     },
   },
   components: {
