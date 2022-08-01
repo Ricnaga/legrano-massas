@@ -32,6 +32,42 @@ const lightTheme: ThemeOptions = {
   spacing: (factor: number) => `${factor}rem`,
   typography: {
     fontFamily: ['Ibarra Real Nova'].join(','),
+    h1: {
+      fontSize: '4rem',
+      fontWeight: 700,
+      lineHeight: 1.6,
+    },
+    h2: {
+      fontSize: '3.4rem',
+      fontWeight: 700,
+      lineHeight: 1.6,
+    },
+    h3: {
+      fontSize: '2.6rem',
+      fontWeight: 500,
+      lineHeight: 1.4,
+    },
+    h4: {
+      fontSize: '2rem',
+      fontWeight: 500,
+      lineHeight: 1.4,
+    },
+    h5: {
+      fontSize: '1.6rem',
+      fontWeight: 400,
+    },
+    h6: {
+      fontSize: '1.2rem',
+      fontWeight: 400,
+    },
+    body1: {
+      fontSize: '1.2rem',
+      fontWeight: 400,
+    },
+    body2: {
+      fontSize: '1rem',
+      fontWeight: 400,
+    },
   },
   components: {
     MuiButton: {
