@@ -10,8 +10,8 @@ type MenuProviderPros = {
 };
 
 export function MenuProvider({ children }: MenuProviderPros) {
-  const { data } = useMenuProvider();
+  const menuProvider = useMenuProvider();
   return (
-    <MenuContext.Provider value={{ data }}>{children}</MenuContext.Provider>
+    <MenuContext.Provider value={menuProvider}>{children}</MenuContext.Provider>
   );
 }

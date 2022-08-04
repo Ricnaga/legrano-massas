@@ -1,3 +1,8 @@
+import { useCaneloneEspinafre } from '../menu/caneloneEspinafre';
+import { useCaneloneTradicional } from '../menu/caneloneTradicional';
+import { useNhoque } from '../menu/nhoque';
+import { useNhoqueRecheado } from '../menu/nhoqueRecheado';
+
 type UseMenuProviderItems = Record<
   'items',
   Array<{
@@ -16,140 +21,35 @@ export type UseMenuProviderData = {
 } & UseMenuProviderItems;
 
 export const useMenuProvider = () => {
-  const menu_nhoque = {
-    id: Math.random().toString(),
-    dough: 'Nhoque',
-    items: [
-      {
-        id: Math.random().toString(),
-        name: 'Batata',
-        price: 36,
-        weight: '1kg',
-        amount: 0,
-        selected: false,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Batata doce',
-        price: 36,
-        weight: '1kg',
-        amount: 0,
-        selected: false,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Mandioca',
-        price: 36,
-        weight: '1kg',
-        amount: 0,
-        selected: false,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Mandioquinha',
-        price: 36,
-        weight: '1kg',
-        amount: 0,
-        selected: false,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Espinafre',
-        price: 36,
-        weight: '1kg',
-        amount: 0,
-        selected: false,
-      },
-    ],
-  };
-  const menu_nhoqueRecheado = {
-    id: Math.random().toString(),
-    dough: 'Nhoque Recheado',
-    items: [
-      {
-        id: Math.random().toString(),
-        name: 'Batata recheada de muçarela',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Batata recheada de muçarela e presunto',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Mandioca recheada de carne seca/queijo',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Mandioquinha recheada de queijo',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-    ],
-  };
-  const menu_caneloneEspinafre = {
-    id: Math.random().toString(),
-    dough: 'Canelone de espinafre',
-    items: [
-      {
-        id: Math.random().toString(),
-        name: 'Muçarela e parmesão',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-    ],
-  };
-  const menu_caneloneTradicional = {
-    id: Math.random().toString(),
-    dough: 'Canelone Tradicional',
-    items: [
-      {
-        id: Math.random().toString(),
-        name: 'Presunto e muçarela',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Tomate seco e muçarela',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Muçarela e parmesão',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-      {
-        id: Math.random().toString(),
-        name: 'Espinafre com ricota',
-        price: 48,
-        weight: '1kg',
-        amount: 0,
-      },
-    ],
-  };
+  const {
+    data: { nhoque_state },
+    functions: { dispatchNhoque },
+  } = useNhoque();
+  const {
+    data: { nhoqueRecheado_state },
+    functions: { dispatchNhoqueRecheado },
+  } = useNhoqueRecheado();
+  const {
+    data: { caneloneEspinafre_state },
+    functions: { dispatchCaneloneEspinafre },
+  } = useCaneloneEspinafre();
+  const {
+    data: { caneloneTradicional_state },
+    functions: { dispatchCaneloneTradicional },
+  } = useCaneloneTradicional();
 
   return {
     data: {
-      menu_nhoque,
-      menu_nhoqueRecheado,
-      menu_caneloneEspinafre,
-      menu_caneloneTradicional,
+      nhoque_state,
+      nhoqueRecheado_state,
+      caneloneEspinafre_state,
+      caneloneTradicional_state,
+    },
+    funtions: {
+      dispatchNhoque,
+      dispatchNhoqueRecheado,
+      dispatchCaneloneEspinafre,
+      dispatchCaneloneTradicional,
     },
   };
 };
