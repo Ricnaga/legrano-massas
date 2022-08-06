@@ -9,8 +9,8 @@ import {
   Typography,
 } from '@mui/material';
 import { AddShoppingCart as AddToCartIcon } from '@mui/icons-material';
-import { useMenuContext } from '../../../../application/MenuProvider/hooks/useMenuContext';
-import { MenuActionsType } from '../../../../application/MenuProvider/menuReducer';
+import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
+import { MenuActionsType } from '../../../../application/menu/menuReducer';
 
 export function MenuDoughs() {
   const {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useMenuContext } from '../../../../application/MenuProvider/hooks/useMenuContext';
-import { MenuActionsType } from '../../../../application/MenuProvider/menuReducer';
+import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
+import { MenuActionsType } from '../../../../application/menu/menuReducer';
 
 export const useTopbar = () => {
   const {
