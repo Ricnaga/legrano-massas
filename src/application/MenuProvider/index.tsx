@@ -1,7 +1,7 @@
 import { createContext, ReactNode } from 'react';
-import { useMenuProvider } from './hooks/useMenuProvider';
+import { menuReducer } from './menu';
 
-type MenuContextProps = ReturnType<typeof useMenuProvider>;
+type MenuContextProps = ReturnType<typeof menuReducer>;
 
 export const MenuContext = createContext({} as MenuContextProps);
 
@@ -10,7 +10,7 @@ type MenuProviderPros = {
 };
 
 export function MenuProvider({ children }: MenuProviderPros) {
-  const menuProvider = useMenuProvider();
+  const menuProvider = menuReducer();
   return (
     <MenuContext.Provider value={menuProvider}>{children}</MenuContext.Provider>
   );
