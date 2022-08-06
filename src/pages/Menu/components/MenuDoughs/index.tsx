@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { AddShoppingCart as AddToCartIcon } from '@mui/icons-material';
 import { useMenuContext } from '../../../../application/MenuProvider/hooks/useMenuContext';
-import { MenuActionsType } from '../../../../application/MenuProvider/menu';
+import { MenuActionsType } from '../../../../application/MenuProvider/menuReducer';
 
 export function MenuDoughs() {
   const {

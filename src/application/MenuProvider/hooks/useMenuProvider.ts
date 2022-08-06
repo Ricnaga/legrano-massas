@@ -1,8 +1,8 @@
 import { useReducer } from 'react';
-import { caneloneEspinafre } from '../menu/categories/caneloneEspinafre';
-import { caneloneTradicional } from '../menu/categories/caneloneTradicional';
-import { nhoque } from '../menu/categories/nhoque';
-import { nhoqueRecheado } from '../menu/categories/nhoqueRecheado';
+import { caneloneEspinafre } from '../menuReducer/categories/caneloneEspinafre';
+import { caneloneTradicional } from '../menuReducer/categories/caneloneTradicional';
+import { nhoque } from '../menuReducer/categories/nhoque';
+import { nhoqueRecheado } from '../menuReducer/categories/nhoqueRecheado';
 
 type UseMenuProviderItems = Record<
   'items',

@@ -1,6 +1,6 @@
 import { Add as AddIcon, Remove as RemoveIcon } from '@mui/icons-material';
 import { Chip, Grid, IconButton, Typography } from '@mui/material';
-import { MenuReducerData } from '../../../../application/MenuProvider/menu';
+import { MenuReducerData } from '../../../../application/MenuProvider/menuReducer';
 import { StyledCard } from './TopbarCartItems.styled';
 
 type TopbarCartItemsProps = Record<'cartItems', Array<MenuReducerData>> & {

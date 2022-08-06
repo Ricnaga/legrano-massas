@@ -1,5 +1,5 @@
 import { createContext, ReactNode } from 'react';
-import { menuReducer } from './menu';
+import { menuReducer } from './menuReducer';
 
 type MenuContextProps = ReturnType<typeof menuReducer>;
 
