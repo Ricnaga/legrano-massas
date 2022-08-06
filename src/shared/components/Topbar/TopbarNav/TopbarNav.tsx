@@ -1,6 +1,6 @@
 import { Link, Typography } from '@mui/material';
 
-export function TopbarMenu() {
+export function TopbarNav() {
   const url = [
     {
       name: 'Home',
