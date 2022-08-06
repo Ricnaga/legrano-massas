@@ -2,7 +2,7 @@ import { MenuReducerData } from '..';
 
 export const caneloneEspinafre: MenuReducerData = {
   id: Math.random().toString(),
-  dough: 'Canelone de espinafre',
+  category: 'Canelone de espinafre',
   items: [
     {
       id: Math.random().toString(),

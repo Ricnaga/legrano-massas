@@ -4,8 +4,8 @@ import { MenuReducerData } from '../../../../application/MenuProvider/menuReduce
 import { StyledCard } from './TopbarCartItems.styled';
 
 type TopbarCartItemsProps = Record<'cartItems', Array<MenuReducerData>> & {
-  addAmount: (categoryId: string, doughId: string) => void;
-  removeAmount: (categoryId: string, doughId: string) => void;
+  addAmount: (categoryId: string, itemId: string) => void;
+  removeAmount: (categoryId: string, itemId: string) => void;
 };
 
 export function TopbarCartItems({
@@ -17,7 +17,7 @@ export function TopbarCartItems({
     <Grid container flexDirection="column">
       {cartItems.length ? (
         <>
-          {cartItems.map(({ dough, id, items }) => (
+          {cartItems.map(({ category, id, items }) => (
             <Grid key={id}>
               <Typography
                 align="center"
@@ -25,7 +25,7 @@ export function TopbarCartItems({
                 color="secondary"
                 marginX={8}
               >
-                {dough}
+                {category}
               </Typography>
               <Grid
                 container

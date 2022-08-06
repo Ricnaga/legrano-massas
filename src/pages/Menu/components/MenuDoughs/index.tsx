@@ -18,18 +18,18 @@ export function MenuDoughs() {
     funtions: { dispatchMenu },
   } = useMenuContext();
 
-  const onAddItemToCart = (categoryId: string, doughId: string) =>
+  const onAddItemToCart = (categoryId: string, itemId: string) =>
     dispatchMenu({
       action: MenuActionsType.ADD_TO_CART,
-      payload: { categoryId, doughId },
+      payload: { categoryId, itemId },
     });
 
   return (
     <Grid>
-      {menuState.map(({ id, dough, items }) => (
+      {menuState.map(({ id, category, items }) => (
         <Grid key={id}>
           <Typography align="center" variant="h1" color="primary">
-            {dough}
+            {category}
           </Typography>
           <ImageList cols={3} gap={18}>
             {items.map((item) => (

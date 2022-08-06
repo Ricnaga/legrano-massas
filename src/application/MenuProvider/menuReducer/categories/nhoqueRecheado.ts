@@ -2,7 +2,7 @@ import { MenuReducerData } from '..';
 
 export const nhoqueRecheado: MenuReducerData = {
   id: Math.random().toString(),
-  dough: 'Nhoque Recheado',
+  category: 'Nhoque Recheado',
   items: [
     {
       id: Math.random().toString(),

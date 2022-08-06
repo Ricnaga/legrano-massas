@@ -18,7 +18,7 @@ type MenuReducerItems = Record<
 
 export type MenuReducerData = {
   id: string;
-  dough: string;
+  category: string;
 } & MenuReducerItems;
 
 export enum MenuActionsType {
@@ -32,7 +32,7 @@ type MenuActions = {
   action: MenuActionsType;
   payload: {
     categoryId: string;
-    doughId: string;
+    itemId: string;
   };
 };
 
@@ -44,7 +44,7 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
           ? {
               ...selectedState,
               items: selectedState.items.map((item) =>
-                item.id === payload.doughId
+                item.id === payload.itemId
                   ? { ...item, selected: true, amount: 1 }
                   : item,
               ),
@@ -59,7 +59,7 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
           ? {
               ...selectedState,
               items: selectedState.items.map((item) =>
-                item.id === payload.doughId
+                item.id === payload.itemId
                   ? { ...item, amount: item.amount + 1 }
                   : item,
               ),
@@ -74,11 +74,11 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
           ? {
               ...selectedState,
               items: selectedState.items.map((item) => {
-                if (item.id === payload.doughId && item.amount - 1 > 0) {
+                if (item.id === payload.itemId && item.amount - 1 > 0) {
                   return { ...item, amount: item.amount - 1 };
                 }
 
-                if (item.id === payload.doughId && item.amount - 1 === 0) {
+                if (item.id === payload.itemId && item.amount - 1 === 0) {
                   return { ...item, amount: 0, selected: false };
                 }
 

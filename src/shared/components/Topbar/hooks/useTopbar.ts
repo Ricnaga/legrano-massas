@@ -23,16 +23,16 @@ export const useTopbar = () => {
     0,
   );
 
-  const addAmountToCartItem = (categoryId: string, doughId: string) =>
+  const addAmountToCartItem = (categoryId: string, itemId: string) =>
     dispatchMenu({
       action: MenuActionsType.ADD_AMOUNT,
-      payload: { categoryId, doughId },
+      payload: { categoryId, itemId },
     });
 
-  const removeAmountToCartItem = (categoryId: string, doughId: string) =>
+  const removeAmountToCartItem = (categoryId: string, itemId: string) =>
     dispatchMenu({
       action: MenuActionsType.REMOVE_FROM_CART,
-      payload: { categoryId, doughId },
+      payload: { categoryId, itemId },
     });
 
   return {

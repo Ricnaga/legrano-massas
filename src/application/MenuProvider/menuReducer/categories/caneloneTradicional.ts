@@ -2,7 +2,7 @@ import { MenuReducerData } from '..';
 
 export const caneloneTradicional: MenuReducerData = {
   id: Math.random().toString(),
-  dough: 'Canelone Tradicional',
+  category: 'Canelone Tradicional',
   items: [
     {
       id: Math.random().toString(),

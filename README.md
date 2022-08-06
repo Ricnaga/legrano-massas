@@ -1,1 +1,3 @@
 LEGRANO
+
+-localstorage
