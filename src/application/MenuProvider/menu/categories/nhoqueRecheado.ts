@@ -1,6 +1,6 @@
-import { UseMenuProviderData } from '../../hooks/useMenuProvider';
+import { MenuReducerData } from '..';
 
-export const menu_nhoqueRecheado: UseMenuProviderData = {
+export const nhoqueRecheado: MenuReducerData = {
   id: Math.random().toString(),
   dough: 'Nhoque Recheado',
   items: [

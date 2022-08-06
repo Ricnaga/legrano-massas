@@ -1,6 +1,6 @@
-import { UseMenuProviderData } from '../../hooks/useMenuProvider';
+import { MenuReducerData } from '..';
 
-export const menu_caneloneEspinafre: UseMenuProviderData = {
+export const caneloneEspinafre: MenuReducerData = {
   id: Math.random().toString(),
   dough: 'Canelone de espinafre',
   items: [
