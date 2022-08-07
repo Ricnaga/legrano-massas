@@ -13,3 +13,5 @@ export const updateCartItems = (updatedCartItems: Array<MenuReducerData>) => {
   localStorage.removeItem(STORAGE_KEY);
   saveCartItems(updatedCartItems);
 };
+
+export const clearCartItems = () => localStorage.clear();

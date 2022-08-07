@@ -19,6 +19,7 @@ export function Topbar() {
       closeDrawer,
       addAmountToCartItem,
       removeAmountToCartItem,
+      clearItemsFromCart,
     },
   } = useTopbar();
 
@@ -38,6 +39,7 @@ export function Topbar() {
             cartItems={addedItemsToCart}
             addAmount={addAmountToCartItem}
             removeAmount={removeAmountToCartItem}
+            clearItems={clearItemsFromCart}
           />
         </Drawer>
       </Toolbar>

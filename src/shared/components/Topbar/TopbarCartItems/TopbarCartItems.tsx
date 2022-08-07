@@ -1,22 +1,27 @@
 import { Add as AddIcon, Remove as RemoveIcon } from '@mui/icons-material';
-import { Chip, Grid, IconButton, Typography } from '@mui/material';
+import { Button, Chip, Grid, IconButton, Typography } from '@mui/material';
 import { MenuReducerData } from '../../../../application/menu/menuReducer';
 import { StyledCard } from './TopbarCartItems.styled';
 
 type TopbarCartItemsProps = Record<'cartItems', Array<MenuReducerData>> & {
   addAmount: (categoryId: string, itemId: string) => void;
   removeAmount: (categoryId: string, itemId: string) => void;
+  clearItems: () => void;
 };
 
 export function TopbarCartItems({
   cartItems,
   addAmount,
   removeAmount,
+  clearItems,
 }: TopbarCartItemsProps) {
   return (
     <Grid container flexDirection="column">
       {cartItems.length ? (
         <>
+          <Button color="warning" onClick={clearItems}>
+            <Typography variant="subtitle1">Limpar</Typography>
+          </Button>
           {cartItems.map(({ category, id, items }) => (
             <Grid key={id}>
               <Typography

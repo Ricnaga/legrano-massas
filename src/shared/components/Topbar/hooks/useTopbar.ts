@@ -7,6 +7,7 @@ export const useTopbar = () => {
     data: { menuState },
     funtions: { dispatchMenu },
   } = useMenuContext();
+
   const [isOpenDrawer, setDrawerOpened] = useState<boolean>(false);
   const openDrawer = () => setDrawerOpened(true);
   const closeDrawer = () => setDrawerOpened(false);
@@ -35,6 +36,12 @@ export const useTopbar = () => {
       payload: { categoryId, itemId },
     });
 
+  const clearItemsFromCart = () =>
+    dispatchMenu({
+      action: MenuActionsType.CLEAR_CART,
+      payload: { categoryId: null, itemId: null },
+    });
+
   return {
     data: { cartItemsLength, addedItemsToCart, isOpenDrawer },
     functions: {
@@ -42,6 +49,7 @@ export const useTopbar = () => {
       closeDrawer,
       addAmountToCartItem,
       removeAmountToCartItem,
+      clearItemsFromCart,
     },
   };
 };

@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
 import { categories } from './categories';
 import {
+  clearCartItems,
   getCartItems,
   saveCartItems,
   updateCartItems,
@@ -23,14 +24,15 @@ export enum MenuActionsType {
   ADD_TO_CART = 'ADD_TO_CART',
   ADD_AMOUNT = 'ADD_AMOUNT',
   REMOVE_FROM_CART = 'REMOVE_FROM_CART',
+  CLEAR_CART = 'CLEAR_CART',
 }
 
 export type MenuState = Array<MenuReducerData>;
 type MenuActions = {
   action: MenuActionsType;
   payload: {
-    categoryId: string;
-    itemId: string;
+    categoryId: string | null;
+    itemId: string | null;
   };
 };
 
@@ -90,6 +92,9 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
       updateCartItems(filteredCartItems);
       return filteredCartItems;
     }
+    case MenuActionsType.CLEAR_CART:
+      clearCartItems();
+      return categories;
     default:
       return state;
   }
