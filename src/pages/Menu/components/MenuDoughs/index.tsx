@@ -6,6 +6,7 @@ import {
   ImageList,
   ImageListItem,
   ImageListItemBar,
+  Tooltip,
   Typography,
 } from '@mui/material';
 import { AddShoppingCart as AddToCartIcon } from '@mui/icons-material';
@@ -35,11 +36,14 @@ export function MenuDoughs() {
             {items.map((item) => (
               <ImageListItem key={item.id}>
                 <Card>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
-                  />
+                  <Tooltip title="Em breve teremos imagens :)" placement="top">
+                    <CardMedia
+                      component="img"
+                      height="200"
+                      alt="Em desenvolvimento"
+                      image="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                    />
+                  </Tooltip>
                 </Card>
                 <ImageListItemBar
                   title={
