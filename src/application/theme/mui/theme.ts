@@ -36,37 +36,45 @@ const lightTheme: ThemeOptions = {
       fontSize: '4rem',
       fontWeight: 700,
       lineHeight: 1.6,
+      letterSpacing: '0.4rem',
     },
     h2: {
       fontSize: '3.4rem',
       fontWeight: 700,
       lineHeight: 1.6,
+      letterSpacing: '0.4rem',
     },
     h3: {
       fontSize: '2.6rem',
       fontWeight: 500,
       lineHeight: 1.4,
+      letterSpacing: '0.2rem',
     },
     h4: {
       fontSize: '2rem',
       fontWeight: 500,
       lineHeight: 1.4,
+      letterSpacing: '0.4rem',
     },
     h5: {
       fontSize: '1.6rem',
       fontWeight: 400,
+      letterSpacing: '0.4rem',
     },
     h6: {
       fontSize: '1.4rem',
       fontWeight: 400,
+      letterSpacing: '0.4rem',
     },
     body1: {
       fontSize: '1.36rem',
       fontWeight: 500,
+      letterSpacing: '0.14rem',
     },
     body2: {
       fontSize: '1.2rem',
       fontWeight: 500,
+      letterSpacing: '0.14rem',
     },
   },
   components: {
