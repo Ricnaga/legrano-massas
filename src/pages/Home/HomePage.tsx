@@ -5,14 +5,19 @@ import { StyledAvatar, StyledGrid } from './HomePage.styled';
 
 export function HomePage() {
   return (
-    <StyledGrid container>
-      <Grid item xs={12} container justifyContent="center" marginY={4}>
+    <StyledGrid
+      container
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="space-around"
+    >
+      <Grid marginY={2}>
         <Grow in>
           <StyledAvatar src={logo} />
         </Grow>
       </Grid>
       <Fade in>
-        <Grid item xs={12} container justifyContent="center">
+        <Grid>
           <HomeContacts />
         </Grid>
       </Fade>

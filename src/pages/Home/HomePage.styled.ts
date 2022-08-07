@@ -6,5 +6,5 @@ export const StyledAvatar = styled(Avatar)`
 `;
 
 export const StyledGrid = styled(Grid)`
-  height: 100%;
+  height: calc(100vh - 4rem);
 `;

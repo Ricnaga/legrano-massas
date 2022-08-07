@@ -1,3 +1,4 @@
+import { AddShoppingCart as AddToCartIcon } from '@mui/icons-material';
 import {
   Card,
   CardMedia,
@@ -9,7 +10,6 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import { AddShoppingCart as AddToCartIcon } from '@mui/icons-material';
 import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
 import { MenuActionsType } from '../../../../application/menu/menuReducer';
 
@@ -32,7 +32,7 @@ export function MenuDoughs() {
           <Typography align="center" variant="h1" color="primary">
             {category}
           </Typography>
-          <ImageList cols={3} gap={18}>
+          <ImageList cols={2} gap={18}>
             {items.map((item) => (
               <ImageListItem key={item.id}>
                 <Card>
