@@ -54,8 +54,7 @@
       {
         "varsIgnorePattern": "React"
       }
-    ],
-    "react/jsx-no-constructed-context-values": "off"
+    ]
   },
   "settings": {
     "import/resolver": {
