@@ -1,25 +1,23 @@
 import { useReducer } from 'react';
-import { caneloneEspinafre } from './categories/caneloneEspinafre';
-import { caneloneTradicional } from './categories/caneloneTradicional';
-import { nhoque } from './categories/nhoque';
-import { nhoqueRecheado } from './categories/nhoqueRecheado';
+import { categories } from './categories';
+import {
+  getCartItems,
+  saveCartItems,
+  updateCartItems,
+} from './storage/localStorage';
 
-type MenuReducerItems = Record<
-  'items',
-  Array<{
+export type MenuReducerData = {
+  id: string;
+  category: string;
+  items: Array<{
     id: string;
     name: string;
     price: number;
     weight: string;
     amount: number;
     selected: boolean;
-  }>
->;
-
-export type MenuReducerData = {
-  id: string;
-  category: string;
-} & MenuReducerItems;
+  }>;
+};
 
 export enum MenuActionsType {
   ADD_TO_CART = 'ADD_TO_CART',
@@ -27,7 +25,7 @@ export enum MenuActionsType {
   REMOVE_FROM_CART = 'REMOVE_FROM_CART',
 }
 
-type MenuState = Array<MenuReducerData>;
+export type MenuState = Array<MenuReducerData>;
 type MenuActions = {
   action: MenuActionsType;
   payload: {
@@ -51,6 +49,7 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
             }
           : selectedState,
       );
+      saveCartItems(addedItemToCart);
       return addedItemToCart;
     }
     case MenuActionsType.ADD_AMOUNT: {
@@ -66,6 +65,7 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
             }
           : selectedState,
       );
+      updateCartItems(addedAmountToItems);
       return addedAmountToItems;
     }
     case MenuActionsType.REMOVE_FROM_CART: {
@@ -87,6 +87,7 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
             }
           : selectedState,
       );
+      updateCartItems(filteredCartItems);
       return filteredCartItems;
     }
     default:
@@ -95,13 +96,8 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
 };
 
 export const menuReducer = () => {
-  const MENU_ITEMS = [
-    nhoque,
-    nhoqueRecheado,
-    caneloneTradicional,
-    caneloneEspinafre,
-  ];
-  const [menuState, dispatch] = useReducer(openMenu, MENU_ITEMS);
+  const STORED_CATEGORIES = getCartItems() ?? categories;
+  const [menuState, dispatch] = useReducer(openMenu, STORED_CATEGORIES);
 
   return {
     data: {

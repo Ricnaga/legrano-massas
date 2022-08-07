@@ -38,7 +38,7 @@ export function MenuDoughs() {
                   <CardMedia
                     component="img"
                     height="200"
-                    image="https://source.unsplash.com/random"
+                    image="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
                   />
                 </Card>
                 <ImageListItemBar
