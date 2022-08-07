@@ -10,6 +10,7 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
+import { useCallback } from 'react';
 import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
 import { MenuActionsType } from '../../../../application/menu/menuReducer';
 
@@ -19,11 +20,14 @@ export function MenuDoughs() {
     funtions: { dispatchMenu },
   } = useMenuContext();
 
-  const onAddItemToCart = (categoryId: string, itemId: string) =>
-    dispatchMenu({
-      action: MenuActionsType.ADD_TO_CART,
-      payload: { categoryId, itemId },
-    });
+  const onAddItemToCart = useCallback(
+    (categoryId: string, itemId: string) =>
+      dispatchMenu({
+        action: MenuActionsType.ADD_TO_CART,
+        payload: { categoryId, itemId },
+      }),
+    [],
+  );
 
   return (
     <Grid>

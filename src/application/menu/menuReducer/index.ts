@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useMemo, useReducer } from 'react';
 import { categories } from './categories';
 import {
   clearCartItems,
@@ -101,7 +101,7 @@ const openMenu = (state: MenuState, { action, payload }: MenuActions) => {
 };
 
 export const menuReducer = () => {
-  const STORED_CATEGORIES = getCartItems() ?? categories;
+  const STORED_CATEGORIES = useMemo(() => getCartItems() ?? categories, []);
   const [menuState, dispatch] = useReducer(openMenu, STORED_CATEGORIES);
 
   return {

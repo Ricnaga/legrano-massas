@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
 import { MenuActionsType } from '../../../../application/menu/menuReducer';
 
@@ -24,23 +24,32 @@ export const useTopbar = () => {
     0,
   );
 
-  const addAmountToCartItem = (categoryId: string, itemId: string) =>
-    dispatchMenu({
-      action: MenuActionsType.ADD_AMOUNT,
-      payload: { categoryId, itemId },
-    });
+  const addAmountToCartItem = useCallback(
+    (categoryId: string, itemId: string) =>
+      dispatchMenu({
+        action: MenuActionsType.ADD_AMOUNT,
+        payload: { categoryId, itemId },
+      }),
+    [],
+  );
 
-  const removeAmountToCartItem = (categoryId: string, itemId: string) =>
-    dispatchMenu({
-      action: MenuActionsType.REMOVE_FROM_CART,
-      payload: { categoryId, itemId },
-    });
+  const removeAmountToCartItem = useCallback(
+    (categoryId: string, itemId: string) =>
+      dispatchMenu({
+        action: MenuActionsType.REMOVE_FROM_CART,
+        payload: { categoryId, itemId },
+      }),
+    [],
+  );
 
-  const clearItemsFromCart = () =>
-    dispatchMenu({
-      action: MenuActionsType.CLEAR_CART,
-      payload: { categoryId: null, itemId: null },
-    });
+  const clearItemsFromCart = useCallback(
+    () =>
+      dispatchMenu({
+        action: MenuActionsType.CLEAR_CART,
+        payload: { categoryId: null, itemId: null },
+      }),
+    [],
+  );
 
   return {
     data: { cartItemsLength, addedItemsToCart, isOpenDrawer },
