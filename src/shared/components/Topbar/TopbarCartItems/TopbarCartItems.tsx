@@ -1,5 +1,12 @@
 import { Add as AddIcon, Remove as RemoveIcon } from '@mui/icons-material';
-import { Button, Chip, Grid, IconButton, Typography } from '@mui/material';
+import {
+  Button,
+  Chip,
+  Fade,
+  Grid,
+  IconButton,
+  Typography,
+} from '@mui/material';
 import { MenuReducerData } from '../../../../application/menu/menuReducer';
 import { StyledCard } from './TopbarCartItems.styled';
 
@@ -103,9 +110,11 @@ export function TopbarCartItems({
           ))}
         </>
       ) : (
-        <Typography align="center" variant="h3" color="secondary" marginX={8}>
-          Carrinho vazio!
-        </Typography>
+        <Fade in>
+          <Typography align="center" variant="h3" color="secondary" marginX={8}>
+            Carrinho vazio!
+          </Typography>
+        </Fade>
       )}
     </Grid>
   );

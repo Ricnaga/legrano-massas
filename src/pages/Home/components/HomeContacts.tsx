@@ -12,17 +12,17 @@ export function HomeContacts() {
   const contacts: Contacts = [
     {
       icon: <WhatsApp fontSize="large" />,
-      source: '/',
+      source: 'https://wa.me/5511910371645',
       title: '(11) 91037-1645',
     },
     {
       icon: <Instagram fontSize="large" />,
-      source: '/',
+      source: 'https://www.instagram.com/legrano_',
       title: '@legrano_',
     },
     {
       icon: <Facebook fontSize="large" />,
-      source: '/',
+      source: 'https://pt-br.facebook.com/legrano.culinariaartesanal',
       title: 'legrano.culinariaartesanal',
     },
   ];
