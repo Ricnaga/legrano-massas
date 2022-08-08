@@ -10,25 +10,13 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import { useCallback } from 'react';
-import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
-import { MenuActionsType } from '../../../../application/menu/menuReducer';
+import { useMenuDoughs } from './hooks/useMenuDoughs';
 
 export function MenuDoughs() {
   const {
-    data: { menuState },
-    funtions: { dispatchMenu },
-  } = useMenuContext();
-
-  const onAddItemToCart = useCallback(
-    (categoryId: string, itemId: string) =>
-      dispatchMenu({
-        action: MenuActionsType.ADD_TO_CART,
-        payload: { categoryId, itemId },
-      }),
-    [],
-  );
-
+    data: { menuState, imageListCols },
+    functions: { onAddItemToCart },
+  } = useMenuDoughs();
   return (
     <Grid>
       {menuState.map(({ id, category, items }) => (
@@ -36,7 +24,7 @@ export function MenuDoughs() {
           <Typography align="center" variant="h1" color="primary">
             {category}
           </Typography>
-          <ImageList cols={2} gap={18}>
+          <ImageList cols={imageListCols} gap={18}>
             {items.map((item) => (
               <ImageListItem key={item.id}>
                 <Card>
