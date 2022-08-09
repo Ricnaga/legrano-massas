@@ -24,6 +24,19 @@ export const useTopbar = () => {
     0,
   );
 
+  const totalPrice = new Intl.NumberFormat('pt-br', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(
+    addedItemsToCart.reduce((accumulator, element) => {
+      const accumulatorItemsPrice = element.items.reduce(
+        (accumulator, { amount, price }) => accumulator + amount * price,
+        0,
+      );
+      return accumulator + accumulatorItemsPrice;
+    }, 0),
+  );
+
   const addAmountToCartItem = useCallback(
     (categoryId: string, itemId: string) =>
       dispatchMenu({
@@ -52,7 +65,7 @@ export const useTopbar = () => {
   );
 
   return {
-    data: { cartItemsLength, addedItemsToCart, isOpenDrawer },
+    data: { cartItemsLength, addedItemsToCart, isOpenDrawer, totalPrice },
     functions: {
       openDrawer,
       closeDrawer,

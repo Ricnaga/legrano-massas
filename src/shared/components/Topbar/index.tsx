@@ -5,6 +5,7 @@ import {
   Drawer,
   Grid,
   IconButton,
+  SwipeableDrawer,
   Toolbar,
 } from '@mui/material';
 import { useTopbar } from './hooks/useTopbar';
@@ -13,7 +14,7 @@ import { TopbarNav } from './TopbarNav/TopbarNav';
 
 export function Topbar() {
   const {
-    data: { cartItemsLength, addedItemsToCart, isOpenDrawer },
+    data: { cartItemsLength, addedItemsToCart, isOpenDrawer, totalPrice },
     functions: {
       openDrawer,
       closeDrawer,
@@ -34,14 +35,20 @@ export function Topbar() {
             <CartIcon />
           </Badge>
         </IconButton>
-        <Drawer open={isOpenDrawer} anchor="right" onClose={closeDrawer}>
+        <SwipeableDrawer
+          open={isOpenDrawer}
+          anchor="right"
+          onOpen={openDrawer}
+          onClose={closeDrawer}
+        >
           <TopbarCartItems
+            totalPrice={totalPrice}
             cartItems={addedItemsToCart}
             addAmount={addAmountToCartItem}
             removeAmount={removeAmountToCartItem}
             clearItems={clearItemsFromCart}
           />
-        </Drawer>
+        </SwipeableDrawer>
       </Toolbar>
     </AppBar>
   );

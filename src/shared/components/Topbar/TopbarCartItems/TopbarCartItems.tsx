@@ -1,4 +1,9 @@
-import { Add as AddIcon, Remove as RemoveIcon } from '@mui/icons-material';
+import {
+  Add as AddIcon,
+  CleaningServices as CleanIcon,
+  Remove as RemoveIcon,
+  WhatsApp as WhatsAppIcon,
+} from '@mui/icons-material';
 import {
   Button,
   Chip,
@@ -8,35 +13,34 @@ import {
   Typography,
 } from '@mui/material';
 import { MenuReducerData } from '../../../../application/menu/menuReducer';
+import { useTopbarCartItems } from './hooks/useTopbarCartItems';
 import { StyledCard } from './TopbarCartItems.styled';
 
 type TopbarCartItemsProps = Record<'cartItems', Array<MenuReducerData>> & {
   addAmount: (categoryId: string, itemId: string) => void;
   removeAmount: (categoryId: string, itemId: string) => void;
   clearItems: () => void;
+  totalPrice: string;
 };
 
 export function TopbarCartItems({
   cartItems,
+  totalPrice,
   addAmount,
   removeAmount,
   clearItems,
 }: TopbarCartItemsProps) {
+  const {
+    data: { drawerOnMObile },
+  } = useTopbarCartItems();
+
   return (
-    <Grid container flexDirection="column">
+    <Grid container flexDirection="column" width={drawerOnMObile}>
       {cartItems.length ? (
         <>
-          <Button color="warning" onClick={clearItems}>
-            <Typography variant="subtitle1">Limpar</Typography>
-          </Button>
           {cartItems.map(({ category, id, items }) => (
             <Grid key={id}>
-              <Typography
-                align="center"
-                variant="h3"
-                color="secondary"
-                marginX={8}
-              >
+              <Typography align="center" variant="h3" color="secondary">
                 {category}
               </Typography>
               <Grid
@@ -87,27 +91,33 @@ export function TopbarCartItems({
                     </Grid>
                   </StyledCard>
                 ))}
-                <Typography
-                  align="center"
-                  variant="h4"
-                  color="secondary"
-                  marginX={8}
-                >
-                  Total:
-                  {new Intl.NumberFormat('pt-br', {
-                    style: 'currency',
-                    currency: 'BRL',
-                  }).format(
-                    items.reduce(
-                      (accumulator, element) =>
-                        accumulator + element.price * element.amount,
-                      0,
-                    ),
-                  )}
-                </Typography>
               </Grid>
             </Grid>
           ))}
+          <Grid container justifyContent="space-between" paddingX={1}>
+            <Grid item xs={12} container justifyContent="center" marginY={1}>
+              <Typography variant="h4" color="secondary">
+                Total:{totalPrice}
+              </Typography>
+            </Grid>
+            <Grid container item xs={5}>
+              <Button
+                color="warning"
+                variant="contained"
+                onClick={clearItems}
+                fullWidth
+              >
+                <CleanIcon />
+                <Typography variant="subtitle1">Limpar</Typography>
+              </Button>
+            </Grid>
+            <Grid container item xs={5}>
+              <Button color="success" variant="contained" fullWidth>
+                <WhatsAppIcon />
+                <Typography variant="subtitle1">Me manda no zap</Typography>
+              </Button>
+            </Grid>
+          </Grid>
         </>
       ) : (
         <Fade in>
