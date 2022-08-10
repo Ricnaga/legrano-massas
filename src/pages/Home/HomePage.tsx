@@ -11,7 +11,7 @@ export function HomePage() {
       alignItems="center"
       justifyContent="space-evenly"
     >
-      <Grid>
+      <Grid paddingX={1}>
         <Grow in>
           <CardMedia component="img" alt="Logo do Legrano" src={logo} />
         </Grow>
