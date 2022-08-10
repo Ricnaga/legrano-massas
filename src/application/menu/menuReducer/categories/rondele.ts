@@ -1,12 +1,12 @@
 import { MenuReducerData } from '..';
 
-export const nhoqueRecheado: MenuReducerData = {
+export const rondele: MenuReducerData = {
   id: Math.random().toString(),
-  category: 'Nhoque Recheado',
+  category: 'Rondele Massa tradicional',
   items: [
     {
       id: Math.random().toString(),
-      name: 'Batata recheada de muçarela',
+      name: 'Presunto e queijo',
       price: 48,
       weight: '1kg',
       amount: 0,
@@ -14,7 +14,7 @@ export const nhoqueRecheado: MenuReducerData = {
     },
     {
       id: Math.random().toString(),
-      name: 'Batata recheada de muçarela e presunto',
+      name: '2 queijos',
       price: 48,
       weight: '1kg',
       amount: 0,
@@ -22,7 +22,7 @@ export const nhoqueRecheado: MenuReducerData = {
     },
     {
       id: Math.random().toString(),
-      name: 'Mandioca recheada de carne seca/queijo',
+      name: 'Tomate seco c/ queijo',
       price: 48,
       weight: '1kg',
       amount: 0,
@@ -30,7 +30,22 @@ export const nhoqueRecheado: MenuReducerData = {
     },
     {
       id: Math.random().toString(),
-      name: 'Mandioquinha recheada de queijo',
+      name: 'Espinafre com ricota',
+      price: 48,
+      weight: '1kg',
+      amount: 0,
+      selected: false,
+    },
+  ],
+};
+
+export const rondeleEspinafre: MenuReducerData = {
+  id: Math.random().toString(),
+  category: 'Rondele Massa de espinafre',
+  items: [
+    {
+      id: Math.random().toString(),
+      name: 'Dois queijos',
       price: 48,
       weight: '1kg',
       amount: 0,
