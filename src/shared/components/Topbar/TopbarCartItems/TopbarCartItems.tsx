@@ -116,7 +116,7 @@ export function TopbarCartItems({
                 color="success"
                 variant="contained"
                 fullWidth
-                href={`http://wa.me/5511977840297?text=${whatsAppText}`}
+                href={`http://wa.me/5511910371645?text=${whatsAppText}`}
               >
                 <WhatsAppIcon />
                 <Typography variant="subtitle1">Me manda no zap</Typography>
