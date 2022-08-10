@@ -12,29 +12,41 @@ export const useTopbar = () => {
   const openDrawer = () => setDrawerOpened(true);
   const closeDrawer = () => setDrawerOpened(false);
 
-  const addedItemsToCart = menuState
-    .map((cartFilteredItems) => ({
-      ...cartFilteredItems,
-      items: cartFilteredItems.items.filter(({ selected }) => selected),
-    }))
-    .filter((selectedCart) => !!selectedCart.items.length);
-
-  const cartItemsLength = addedItemsToCart.reduce(
-    (accumulator, element) => accumulator + element.items.length,
-    0,
+  const addedItemsToCart = useMemo(
+    () =>
+      menuState
+        .map((cartFilteredItems) => ({
+          ...cartFilteredItems,
+          items: cartFilteredItems.items.filter(({ selected }) => selected),
+        }))
+        .filter((selectedCart) => !!selectedCart.items.length),
+    [menuState],
   );
 
-  const totalPrice = new Intl.NumberFormat('pt-br', {
-    style: 'currency',
-    currency: 'BRL',
-  }).format(
-    addedItemsToCart.reduce((accumulator, element) => {
-      const accumulatorItemsPrice = element.items.reduce(
-        (accumulator, { amount, price }) => accumulator + amount * price,
+  const cartItemsLength = useMemo(
+    () =>
+      addedItemsToCart.reduce(
+        (accumulator, element) => accumulator + element.items.length,
         0,
-      );
-      return accumulator + accumulatorItemsPrice;
-    }, 0),
+      ),
+    [addedItemsToCart],
+  );
+
+  const totalPrice = useMemo(
+    () =>
+      new Intl.NumberFormat('pt-br', {
+        style: 'currency',
+        currency: 'BRL',
+      }).format(
+        addedItemsToCart.reduce((accumulator, element) => {
+          const accumulatorItemsPrice = element.items.reduce(
+            (accumulator, { amount, price }) => accumulator + amount * price,
+            0,
+          );
+          return accumulator + accumulatorItemsPrice;
+        }, 0),
+      ),
+    [addedItemsToCart],
   );
 
   const whatsAppText = useMemo(
