@@ -10,6 +10,7 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
+import { getBRL } from '../../../../shared/utils/number';
 import { useMenuDoughs } from './hooks/useMenuDoughs';
 
 export function MenuDoughs() {
@@ -66,12 +67,7 @@ export function MenuDoughs() {
                         />
                       </Grid>
                       <Grid>
-                        <Typography variant="body1">
-                          {new Intl.NumberFormat('pt-br', {
-                            style: 'currency',
-                            currency: 'BRL',
-                          }).format(36)}
-                        </Typography>
+                        <Typography variant="body1">{getBRL(36)}</Typography>
                       </Grid>
                     </Grid>
                   }

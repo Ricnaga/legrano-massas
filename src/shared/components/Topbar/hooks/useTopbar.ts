@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
 import { MenuActionsType } from '../../../../application/menu/menuReducer';
+import { getBRL } from '../../../utils/number';
 
 export const useTopbar = () => {
   const {
@@ -34,10 +35,7 @@ export const useTopbar = () => {
 
   const totalPrice = useMemo(
     () =>
-      new Intl.NumberFormat('pt-br', {
-        style: 'currency',
-        currency: 'BRL',
-      }).format(
+      getBRL(
         addedItemsToCart.reduce((accumulator, element) => {
           const accumulatorItemsPrice = element.items.reduce(
             (accumulator, { amount, price }) => accumulator + amount * price,

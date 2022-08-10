@@ -13,6 +13,7 @@ import {
   Typography,
 } from '@mui/material';
 import { MenuReducerData } from '../../../../application/menu/menuReducer';
+import { getBRL } from '../../../utils/number';
 import { useTopbarCartItems } from './hooks/useTopbarCartItems';
 import { StyledCard } from './TopbarCartItems.styled';
 
@@ -85,10 +86,7 @@ export function TopbarCartItems({
                         </IconButton>
                       </Grid>
                       <Typography variant="body1" color="secondary">
-                        {new Intl.NumberFormat('pt-br', {
-                          style: 'currency',
-                          currency: 'BRL',
-                        }).format(item.price * item.amount)}
+                        {getBRL(item.price * item.amount)}
                       </Typography>
                     </Grid>
                   </StyledCard>
