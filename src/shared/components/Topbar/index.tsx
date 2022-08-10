@@ -2,7 +2,6 @@ import { ShoppingCart as CartIcon } from '@mui/icons-material';
 import {
   AppBar,
   Badge,
-  Drawer,
   Grid,
   IconButton,
   SwipeableDrawer,
@@ -14,7 +13,13 @@ import { TopbarNav } from './TopbarNav/TopbarNav';
 
 export function Topbar() {
   const {
-    data: { cartItemsLength, addedItemsToCart, isOpenDrawer, totalPrice },
+    data: {
+      cartItemsLength,
+      addedItemsToCart,
+      isOpenDrawer,
+      totalPrice,
+      whatsAppText,
+    },
     functions: {
       openDrawer,
       closeDrawer,
@@ -42,6 +47,7 @@ export function Topbar() {
           onClose={closeDrawer}
         >
           <TopbarCartItems
+            whatsAppText={whatsAppText}
             totalPrice={totalPrice}
             cartItems={addedItemsToCart}
             addAmount={addAmountToCartItem}

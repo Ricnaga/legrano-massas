@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
 import { MenuActionsType } from '../../../../application/menu/menuReducer';
 
@@ -37,6 +37,23 @@ export const useTopbar = () => {
     }, 0),
   );
 
+  const whatsAppText = useMemo(
+    () => `${`
+  Olá tudo bem %3F,
+  %0A Quero encomendar algumas coisas que vi no site Legrano:%0A
+  ${addedItemsToCart.map(
+    ({ category, items }) => `
+    %0A${category.toUpperCase()}%0A
+  ${items.map(
+    ({ amount, name }) => `(${amount}x - ${name})%0A
+  `,
+  )}%0A
+`,
+  )}`.replace(/,/g, '')}
+  %0ATotal: ${totalPrice}`,
+    [addedItemsToCart, totalPrice],
+  );
+
   const addAmountToCartItem = useCallback(
     (categoryId: string, itemId: string) =>
       dispatchMenu({
@@ -65,7 +82,13 @@ export const useTopbar = () => {
   );
 
   return {
-    data: { cartItemsLength, addedItemsToCart, isOpenDrawer, totalPrice },
+    data: {
+      cartItemsLength,
+      addedItemsToCart,
+      isOpenDrawer,
+      totalPrice,
+      whatsAppText,
+    },
     functions: {
       openDrawer,
       closeDrawer,

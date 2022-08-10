@@ -21,11 +21,13 @@ type TopbarCartItemsProps = Record<'cartItems', Array<MenuReducerData>> & {
   removeAmount: (categoryId: string, itemId: string) => void;
   clearItems: () => void;
   totalPrice: string;
+  whatsAppText: string;
 };
 
 export function TopbarCartItems({
   cartItems,
   totalPrice,
+  whatsAppText,
   addAmount,
   removeAmount,
   clearItems,
@@ -112,7 +114,12 @@ export function TopbarCartItems({
               </Button>
             </Grid>
             <Grid container item xs={5}>
-              <Button color="success" variant="contained" fullWidth>
+              <Button
+                color="success"
+                variant="contained"
+                fullWidth
+                href={`http://wa.me/5511977840297?text=${whatsAppText}`}
+              >
                 <WhatsAppIcon />
                 <Typography variant="subtitle1">Me manda no zap</Typography>
               </Button>
