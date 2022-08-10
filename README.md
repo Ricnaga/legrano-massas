@@ -20,6 +20,7 @@
 
 - [TypeScript](https://www.typescriptlang.org/) - Tipagens
 - [Reactjs](https://pt-br.reactjs.org/) - useState | useEffect e useReducer
+- [Localstorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage) - Armzenamento de dados do carrinho
 - [React Router DOM](https://reactrouter.com/docs/en/v6/getting-started/overview) - Roteamento de páginas
 - [Mui](https://mui.com/) Componentes personalizados
 - [ESLint](https://eslint.org/) - linter para código
