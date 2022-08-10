@@ -19,8 +19,8 @@
 ### <div align="center"> Aplicação em Reactjs/Typescript, abordando conceitos sobre: </div>
 
 - [TypeScript](https://www.typescriptlang.org/) - Tipagens
-- [Reactjs](https://pt-br.reactjs.org/) - useState | useEffect e useReducer
-- [Localstorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage) - Armzenamento de dados do carrinho
+- [Reactjs](https://pt-br.reactjs.org/) - useState e useReducer
+- [Localstorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage) - Armazenamento de dados do carrinho
 - [React Router DOM](https://reactrouter.com/docs/en/v6/getting-started/overview) - Roteamento de páginas
 - [Mui](https://mui.com/) Componentes personalizados
 - [ESLint](https://eslint.org/) - linter para código
@@ -52,4 +52,4 @@ $ yarn dev (ou npm run dev)
 
 ## <div align="center">Demonstração</div>
 
-### <div align="center"> [https://legranomassas.netlify.app](https://legrano.netlify.app/)</div>
+### <div align="center"> [https://legranomassas.netlify.app](https://legranomassas.netlify.app/)</div>

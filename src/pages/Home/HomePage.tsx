@@ -1,7 +1,7 @@
-import { Fade, Grid, Grow } from '@mui/material';
+import { CardMedia, Fade, Grid, Grow } from '@mui/material';
 import logo from '../../assets/logo.png';
 import { HomeContacts } from './components/HomeContacts';
-import { StyledAvatar, StyledGrid } from './HomePage.styled';
+import { StyledGrid } from './HomePage.styled';
 
 export function HomePage() {
   return (
@@ -9,11 +9,11 @@ export function HomePage() {
       container
       flexDirection="column"
       alignItems="center"
-      justifyContent="space-around"
+      justifyContent="space-evenly"
     >
-      <Grid marginY={2}>
+      <Grid>
         <Grow in>
-          <StyledAvatar src={logo} />
+          <CardMedia component="img" alt="Logo do Legrano" src={logo} />
         </Grow>
       </Grid>
       <Fade in>

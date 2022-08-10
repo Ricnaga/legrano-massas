@@ -29,12 +29,14 @@ export function HomeContacts() {
   return (
     <Grid flexDirection="column">
       {contacts.map(({ icon, source, title }) => (
-        <Typography variant="h3" key={title}>
+        <Grid container alignItems="center">
           {icon}
-          <Link href={source} marginLeft={1}>
-            {title}
-          </Link>
-        </Typography>
+          <Typography variant="body2" key={title}>
+            <Link href={source} marginLeft={1}>
+              {title}
+            </Link>
+          </Typography>
+        </Grid>
       ))}
     </Grid>
   );
