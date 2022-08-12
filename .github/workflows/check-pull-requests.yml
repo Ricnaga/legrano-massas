@@ -5,27 +5,27 @@ on:
 
 jobs:
   build:
-  runs-on: ubuntu-lattest
-  steps:
-    - name: checkout repository
-      uses: actions/checkout@v3
+    runs-on: ubuntu-lattest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
 
-    - name: setup node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.15.x
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.x
 
-    - name: Install dependencies
-      run: yarn install
+      - name: Install dependencies
+        run: yarn install
 
-    - name: Linting code
-      run: yarn lint:fix
+      - name: Linting code
+        run: yarn lint:fix
 
-    - name: Type check
-      run: yarn typecheck
+      - name: Type check
+        run: yarn typecheck
 
-    - name: Linting styles
-      run: prettier --write
+      - name: Linting styles
+        run: prettier --write
 
-    - name: Build
-      run: yarn build
+      - name: Build
+        run: yarn build
