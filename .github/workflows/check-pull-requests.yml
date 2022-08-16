@@ -24,6 +24,9 @@ jobs:
       - name: Type check
         run: yarn typecheck
 
+      - name: Jest
+        run: yarn test --bail
+
       - name: Linting styles
         run: prettier --write
 

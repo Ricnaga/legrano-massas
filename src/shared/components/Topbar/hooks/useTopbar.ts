@@ -6,7 +6,7 @@ import { getBRL } from '../../../utils/number';
 export const useTopbar = () => {
   const {
     data: { menuState },
-    funtions: { dispatchMenu },
+    functions: { dispatchMenu },
   } = useMenuContext();
 
   const [isOpenDrawer, setDrawerOpened] = useState<boolean>(false);

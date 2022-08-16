@@ -108,7 +108,7 @@ export const menuReducer = () => {
     data: {
       menuState,
     },
-    funtions: {
+    functions: {
       dispatchMenu: dispatch,
     },
   };

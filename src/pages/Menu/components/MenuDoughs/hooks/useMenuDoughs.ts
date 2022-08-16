@@ -8,7 +8,7 @@ export const useMenuDoughs = () => {
   const { breakpoints } = useTheme();
   const {
     data: { menuState },
-    funtions: { dispatchMenu },
+    functions: { dispatchMenu },
   } = useMenuContext();
 
   const onAddItemToCart = useCallback(
