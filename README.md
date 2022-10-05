@@ -27,6 +27,8 @@
 - [Prettier](https://prettier.io/) - formatador de código
 - [Husky](https://typicode.github.io/husky/#/) - Capturar determinado momento de um commit
 - [Lint-staged](https://github.com/okonet/lint-staged) - Executar ações em determinado momento de um commit
+- [Github Actions](https://github.com/features/actions) - Executar verificações durante a atualização de uma nova dependêcnia via github
+- [Testing library](https://testing-library.com/) - testes unitários de hooks e components
 
 ## <div align="center">Requisitos</div>
 

@@ -6,20 +6,22 @@ jest.mock('../../../../../application/menu/hooks/useMenuContext', () => ({
   __esModule: true,
   useMenuContext: () => ({
     data: {
-      menuState: {
-        id: 'mock id',
-        category: 'mock category',
-        items: [
-          {
-            id: 'mock id',
-            name: 'mock name',
-            price: 1,
-            weight: 'mock weight',
-            amount: 1,
-            selected: false,
-          },
-        ],
-      },
+      menuState: [
+        {
+          id: 'mock id',
+          category: 'mock category',
+          items: [
+            {
+              id: 'mock id',
+              name: 'mock name',
+              price: 1,
+              weight: 'mock weight',
+              amount: 1,
+              selected: false,
+            },
+          ],
+        },
+      ],
     },
     functions: { dispatchMenu: jest.fn() },
   }),

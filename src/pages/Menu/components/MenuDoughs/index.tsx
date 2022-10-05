@@ -60,7 +60,7 @@ export function MenuDoughs() {
                             <Grid container>
                               <AddToCartIcon color="secondary" />
                               <Typography variant="body2" color="secondary">
-                                Adicionar ao carrinho
+                                Colocar no carrinho
                               </Typography>
                             </Grid>
                           }
