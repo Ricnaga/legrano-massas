@@ -2,11 +2,9 @@ import { Facebook, Instagram, WhatsApp } from '@mui/icons-material';
 import { Grid, Link, Typography } from '@mui/material';
 import { ReactNode } from 'react';
 
-type Contacts = Array<{
-  icon: JSX.Element | ReactNode;
-  source: string;
-  title: string;
-}>;
+type Contacts = Array<
+  { icon: JSX.Element | ReactNode } & Record<'source' | 'title', string>
+>;
 
 export function HomeContacts() {
   const contacts: Contacts = [
@@ -31,7 +29,7 @@ export function HomeContacts() {
       {contacts.map(({ icon, source, title }) => (
         <Grid container alignItems="center" key={title}>
           {icon}
-          <Typography variant="body2" key={title}>
+          <Typography variant="body2">
             <Link href={source} marginLeft={1}>
               {title}
             </Link>

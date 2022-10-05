@@ -12,9 +12,7 @@ function AllRoutes() {
   );
 }
 
-type RouterProviderProps = {
-  children: ReactNode;
-};
+type RouterProviderProps = Partial<Record<'children', ReactNode>>;
 
 export function RouterProvider({ children }: RouterProviderProps) {
   return (

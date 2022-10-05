@@ -1,5 +1,4 @@
-import React from 'react';
-import { renderWithTheme } from '../../application/test/testing-library';
+import { renderWithTheme } from 'application/test/testing-library';
 import { MenuPage } from './MenuPage';
 
 jest.mock('./components/MenuDoughs', () => ({

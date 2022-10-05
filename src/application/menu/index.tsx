@@ -5,9 +5,7 @@ type MenuContextProps = ReturnType<typeof menuReducer>;
 
 export const MenuContext = createContext({} as MenuContextProps);
 
-type MenuProviderPros = {
-  children: ReactNode;
-};
+type MenuProviderPros = Partial<Record<'children', ReactNode>>;
 
 export function MenuProvider({ children }: MenuProviderPros) {
   const menuProvider = menuReducer();

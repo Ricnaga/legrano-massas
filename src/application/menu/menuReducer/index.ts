@@ -30,10 +30,7 @@ export enum MenuActionsType {
 export type MenuState = Array<MenuReducerData>;
 type MenuActions = {
   action: MenuActionsType;
-  payload: {
-    categoryId: string | null;
-    itemId: string | null;
-  };
+  payload: Record<'categoryId' | 'itemId', string | null>;
 };
 
 const openMenu = (state: MenuState, { action, payload }: MenuActions) => {

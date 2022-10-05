@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderWithTheme } from '../../application/test/testing-library';
+import { renderWithTheme } from 'application/test/testing-library';
 import { HomePage } from './HomePage';
 
 describe('HOME SCREEN', () => {

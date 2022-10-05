@@ -1,8 +1,8 @@
 import { act, renderHook } from '@testing-library/react';
-import { ResultHook } from '../../../../../shared/utils/types';
+import { ResultHook } from 'shared/utils/types';
 import { useMenuDoughs } from './useMenuDoughs';
 
-jest.mock('../../../../../application/menu/hooks/useMenuContext', () => ({
+jest.mock('application/menu/hooks/useMenuContext', () => ({
   __esModule: true,
   useMenuContext: () => ({
     data: {

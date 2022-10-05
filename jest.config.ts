@@ -1,6 +1,7 @@
-import type { Config } from '@jest/types';
+import { pathsToModuleNameMapper, JestConfigWithTsJest } from 'ts-jest';
+import { compilerOptions } from './tsconfig.json';
 
-const config: Config.InitialOptions = {
+const config: JestConfigWithTsJest = {
   clearMocks: true,
   collectCoverageFrom: [
     '<rootDir>/src/pages/**/*.[jt]s?(x)',
@@ -11,6 +12,9 @@ const config: Config.InitialOptions = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'json', 'text', 'text-summary'],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/',
+  }),
   preset: 'ts-jest',
   roots: ['<rootDir>/src'],
   setupFilesAfterEnv: ['<rootDir>/src/application/test/setupTests.ts'],

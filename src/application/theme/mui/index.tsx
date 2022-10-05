@@ -6,9 +6,7 @@ import {
 } from '@mui/material';
 import { theme } from './theme';
 
-type MuiProviderProps = {
-  children: ReactNode;
-};
+type MuiProviderProps = Partial<Record<'children', ReactNode>>;
 
 export function MuiProvider({ children }: MuiProviderProps) {
   return (

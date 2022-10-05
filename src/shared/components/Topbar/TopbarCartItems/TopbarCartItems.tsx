@@ -12,18 +12,19 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
-import { MenuReducerData } from '../../../../application/menu/menuReducer';
-import { getBRL } from '../../../utils/number';
+import { MenuReducerData } from 'application/menu/menuReducer';
+import { getBRL } from 'shared/utils/number';
 import { useTopbarCartItems } from './hooks/useTopbarCartItems';
 import { StyledCard } from './TopbarCartItems.styled';
 
-type TopbarCartItemsProps = Record<'cartItems', Array<MenuReducerData>> & {
-  addAmount: (categoryId: string, itemId: string) => void;
-  removeAmount: (categoryId: string, itemId: string) => void;
-  clearItems: () => void;
-  totalPrice: string;
-  whatsAppText: string;
-};
+type TopbarCartItemsProps = Record<'cartItems', Array<MenuReducerData>> &
+  Record<
+    'addAmount' | 'removeAmount',
+    (categoryId: string, itemId: string) => void
+  > &
+  Record<'totalPrice' | 'whatsAppText', string> & {
+    clearItems: () => void;
+  };
 
 export function TopbarCartItems({
   cartItems,
