@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page: MenuPage should render correctly 1`] = `
+<div>
+  <div
+    class="MuiGrid-root css-ndpptv-MuiGrid-root"
+  >
+    <div>
+      Mock MenuDoughs
+    </div>
+  </div>
+</div>
+`;
