@@ -1,6 +1,6 @@
 import { CardMedia, Fade, Grid, Grow } from '@mui/material';
 import logo from '@assets/logo.png';
-import { HomeContacts } from './components/HomeContacts';
+import { HomeContacts } from './components/HomeContacts/HomeContacts';
 import { StyledGrid } from './HomePage.styled';
 
 export function HomePage() {
