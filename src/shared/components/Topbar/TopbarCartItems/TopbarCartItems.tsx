@@ -12,8 +12,8 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
-import { MenuReducerData } from 'application/menu/menuReducer';
-import { getBRL } from 'shared/utils/number';
+import { MenuReducerData } from '@application/menu/menuReducer';
+import { getBRL } from '@shared/utils/number';
 import { useTopbarCartItems } from './hooks/useTopbarCartItems';
 import { StyledCard } from './TopbarCartItems.styled';
 
