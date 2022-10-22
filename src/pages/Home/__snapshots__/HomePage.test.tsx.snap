@@ -6,7 +6,7 @@ exports[`Page: HomePage should render correctly 1`] = `
     class="MuiGrid-root MuiGrid-container css-1hmj4x9-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root css-1khrts6-MuiGrid-root"
+      class="MuiGrid-root css-1y66wer-MuiGrid-root"
     >
       <img
         alt="Logo do Legrano"
@@ -37,10 +37,10 @@ exports[`Page: HomePage should render correctly 1`] = `
             />
           </svg>
           <p
-            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-b240w0-MuiTypography-root"
           >
             <a
-              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-54y6s3-MuiTypography-root-MuiLink-root"
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1vcnyyg-MuiTypography-root-MuiLink-root"
               href="https://wa.me/5511910371645"
             >
               (11) 91037-1645
@@ -62,10 +62,10 @@ exports[`Page: HomePage should render correctly 1`] = `
             />
           </svg>
           <p
-            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-b240w0-MuiTypography-root"
           >
             <a
-              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-54y6s3-MuiTypography-root-MuiLink-root"
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1vcnyyg-MuiTypography-root-MuiLink-root"
               href="https://www.instagram.com/legrano_"
             >
               @legrano_
@@ -87,10 +87,10 @@ exports[`Page: HomePage should render correctly 1`] = `
             />
           </svg>
           <p
-            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-b240w0-MuiTypography-root"
           >
             <a
-              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-54y6s3-MuiTypography-root-MuiLink-root"
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1vcnyyg-MuiTypography-root-MuiLink-root"
               href="https://pt-br.facebook.com/legrano.culinariaartesanal"
             >
               legrano.culinariaartesanal

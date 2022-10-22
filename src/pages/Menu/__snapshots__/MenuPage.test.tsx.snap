@@ -3,7 +3,7 @@
 exports[`Page: MenuPage should render correctly 1`] = `
 <div>
   <div
-    class="MuiGrid-root css-ndpptv-MuiGrid-root"
+    class="MuiGrid-root css-jn9ra0-MuiGrid-root"
   >
     <div>
       Mock MenuDoughs

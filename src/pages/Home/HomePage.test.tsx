@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '@application/test/testing-library';
 import { HomePage } from './HomePage';
 
 describe('Page: HomePage', () => {
   it('should render correctly', () => {
-    const { container } = render(<HomePage />);
+    const { container } = renderWithTheme(<HomePage />);
     expect(container).toMatchSnapshot();
   });
 });

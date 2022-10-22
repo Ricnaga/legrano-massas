@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import { MenuDoughs } from './components/MenuDoughs';
+import { MenuDoughs } from './components/MenuDoughs/MenuDoughs';
 
 export function MenuPage() {
   return (
