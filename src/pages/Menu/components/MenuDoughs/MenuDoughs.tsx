@@ -10,7 +10,7 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import { getBRL } from '@shared/utils/number';
+import { getBRL } from '../../../../shared/utils/number';
 import { useMenuDoughs } from './hooks/useMenuDoughs';
 
 export function MenuDoughs() {

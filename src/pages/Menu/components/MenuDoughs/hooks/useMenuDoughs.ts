@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import { useTheme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useMenuContext } from '@application/menu/hooks/useMenuContext';
-import { MenuActionsType } from '@application/menu/menuReducer';
+import { useMenuContext } from '../../../../../application/menu/hooks/useMenuContext';
+import { MenuActionsType } from '../../../../../application/menu/menuReducer';
 
 export const useMenuDoughs = () => {
   const { breakpoints } = useTheme();

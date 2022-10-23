@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
-import { useMenuContext } from '@application/menu/hooks/useMenuContext';
-import { MenuActionsType } from '@application/menu/menuReducer';
-import { getBRL } from '@shared/utils/number';
+import { useMenuContext } from '../../../../application/menu/hooks/useMenuContext';
+import { MenuActionsType } from '../../../../application/menu/menuReducer';
+import { getBRL } from '../../../utils/number';
 
 export const useTopbar = () => {
   const {
