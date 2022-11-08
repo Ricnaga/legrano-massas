@@ -60,14 +60,17 @@ export function MenuDoughs() {
                             <Grid container>
                               <AddToCartIcon color="secondary" />
                               <Typography variant="body2" color="secondary">
-                                Colocar no carrinho
+                                {item.selected ? 'Adicionado' : 'Colocar'} no
+                                carrinho
                               </Typography>
                             </Grid>
                           }
                         />
                       </Grid>
                       <Grid>
-                        <Typography variant="body1">{getBRL(36)}</Typography>
+                        <Typography variant="body1">
+                          {getBRL(item.price)}
+                        </Typography>
                       </Grid>
                     </Grid>
                   }
