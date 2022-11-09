@@ -13,7 +13,6 @@ export function TopbarNav() {
   ];
   return (
     <>
-      |
       {url.map(({ name, source }) => (
         <Link
           key={source}
@@ -27,7 +26,6 @@ export function TopbarNav() {
           </Typography>
         </Link>
       ))}
-      |
     </>
   );
 }
