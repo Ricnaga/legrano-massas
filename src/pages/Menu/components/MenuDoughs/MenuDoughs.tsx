@@ -34,7 +34,7 @@ export function MenuDoughs() {
                       component="img"
                       height="200"
                       alt="Em desenvolvimento"
-                      image="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                      image="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
                     />
                   </Tooltip>
                 </Card>

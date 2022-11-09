@@ -33,7 +33,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -131,7 +131,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -229,7 +229,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -327,7 +327,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -425,7 +425,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -537,7 +537,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -635,7 +635,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -733,7 +733,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -831,7 +831,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -943,7 +943,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1041,7 +1041,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1139,7 +1139,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1237,7 +1237,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1349,7 +1349,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1461,7 +1461,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1559,7 +1559,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1657,7 +1657,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1769,7 +1769,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1867,7 +1867,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -1965,7 +1965,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2063,7 +2063,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2175,7 +2175,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2287,7 +2287,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2385,7 +2385,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2483,7 +2483,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2581,7 +2581,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2693,7 +2693,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2805,7 +2805,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -2903,7 +2903,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
@@ -3001,7 +3001,7 @@ exports[`Page: MenuPage should render correctly 1`] = `
                 class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
                 data-mui-internal-clone-element="true"
                 height="200"
-                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b"
+                src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=400"
               />
             </div>
             <div
