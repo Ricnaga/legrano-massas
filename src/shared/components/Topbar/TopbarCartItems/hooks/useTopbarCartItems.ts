@@ -1,9 +1,8 @@
-import { Theme, useMediaQuery } from '@mui/material';
+import { Theme, useMediaQuery, useTheme } from '@mui/material';
 
 export const useTopbarCartItems = () => {
-  const drawerOnMObile = useMediaQuery<Theme>(({ breakpoints }) =>
-    breakpoints.down('sm'),
-  )
+  const { breakpoints } = useTheme();
+  const drawerOnMObile = useMediaQuery<Theme>(breakpoints.down('sm'))
     ? '100vw'
     : '100%';
 

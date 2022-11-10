@@ -1,10 +1,31 @@
 import { ThemeProvider } from '@mui/material';
-import { render, RenderResult } from '@testing-library/react';
+import {
+  render,
+  RenderResult,
+  screen,
+  renderHook,
+  fireEvent,
+  act,
+  waitFor,
+} from '@testing-library/react';
+import testingUserEvent from '@testing-library/user-event';
 import { ReactNode } from 'react';
 import { theme } from '../../theme/mui/theme';
 import { MenuProvider } from '../../menu';
 
-export const renderWithTheme = (children: ReactNode): RenderResult =>
+const renderWithTheme = (children: ReactNode): RenderResult =>
   render(<ThemeProvider theme={theme}>{children}</ThemeProvider>, {
     wrapper: MenuProvider,
   });
+
+const userEvent = testingUserEvent.setup();
+
+export {
+  userEvent,
+  renderWithTheme,
+  screen,
+  renderHook,
+  fireEvent,
+  act,
+  waitFor,
+};
