@@ -1,4 +1,4 @@
-import { renderWithTheme } from '../../application/test/testing-library';
+import { renderWithTheme } from '@application/test/testing-library';
 import { HomePage } from './HomePage';
 
 describe('Page: HomePage', () => {
