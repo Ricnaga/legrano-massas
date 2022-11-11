@@ -1,11 +1,11 @@
+import { ResultHook } from '@shared/utils/types';
+import { act, renderHook } from '@application/test/testing-library';
+import { MenuReducerData } from '@application/menu/menuReducer';
 import { useTopbar } from './useTopbar';
-import { ResultHook } from '../../../utils/types';
-import { act, renderHook } from '../../../../application/test/testing-library';
-import { MenuReducerData } from '../../../../application/menu/menuReducer';
 
 let resultHook: ResultHook<typeof useTopbar>;
 
-jest.mock('../../../../application/menu/hooks/useMenuContext', () => ({
+jest.mock('@application/menu/hooks/useMenuContext', () => ({
   __esModule: true,
   useMenuContext: () => ({
     data: {

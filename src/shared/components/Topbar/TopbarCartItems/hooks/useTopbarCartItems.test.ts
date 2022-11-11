@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react';
-import { ResultHook } from '../../../../utils/types';
+import { ResultHook } from '@shared/utils/types';
 import { useTopbarCartItems } from './useTopbarCartItems';
 
 let resultHook: ResultHook<typeof useTopbarCartItems>;

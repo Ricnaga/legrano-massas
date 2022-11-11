@@ -1,5 +1,5 @@
+import { renderWithTheme } from '@application/test/testing-library';
 import { Topbar } from './Topbar';
-import { renderWithTheme } from '../../../application/test/testing-library';
 
 describe('Component: Topbar', () => {
   it('should render correctly', () => {

@@ -1,6 +1,6 @@
+import { ReactNode } from 'react';
 import { Facebook, Instagram, WhatsApp } from '@mui/icons-material';
 import { Grid, Link, Typography } from '@mui/material';
-import { ReactNode } from 'react';
 
 type Contacts = Array<
   { icon: JSX.Element | ReactNode } & Record<'source' | 'title', string>

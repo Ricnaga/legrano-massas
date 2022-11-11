@@ -1,6 +1,6 @@
 import { useTheme, useMediaQuery } from '@mui/material';
-import { useMenuContext } from '../../../../../application/menu/hooks/useMenuContext';
-import { MenuActionsType } from '../../../../../application/menu/menuReducer';
+import { useMenuContext } from '@application/menu/hooks/useMenuContext';
+import { MenuActionsType } from '@application/menu/menuReducer';
 
 export const useMenuDoughs = () => {
   const { breakpoints } = useTheme();

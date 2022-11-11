@@ -1,4 +1,4 @@
-import { renderWithTheme } from '../../application/test/testing-library';
+import { renderWithTheme } from '@application/test/testing-library';
 import { MenuPage } from './MenuPage';
 
 describe('Page: MenuPage', () => {

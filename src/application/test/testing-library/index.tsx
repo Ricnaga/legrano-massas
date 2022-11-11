@@ -1,3 +1,5 @@
+import { MenuProvider } from '@application/menu';
+import { theme } from '@application/theme/mui/theme';
 import { ThemeProvider } from '@mui/material';
 import {
   render,
@@ -10,8 +12,6 @@ import {
 } from '@testing-library/react';
 import testingUserEvent from '@testing-library/user-event';
 import { ReactNode } from 'react';
-import { theme } from '../../theme/mui/theme';
-import { MenuProvider } from '../../menu';
 
 const renderWithTheme = (children: ReactNode): RenderResult =>
   render(<ThemeProvider theme={theme}>{children}</ThemeProvider>, {

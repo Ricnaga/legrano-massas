@@ -1,7 +1,9 @@
-import { screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {
+  renderWithTheme,
+  userEvent,
+  screen,
+} from '@application/test/testing-library';
 import { MenuDoughs } from './MenuDoughs';
-import { renderWithTheme } from '../../../../application/test/testing-library';
 
 let containerTheme: HTMLElement;
 describe('Components: MenuDoughs', () => {
@@ -15,14 +17,13 @@ describe('Components: MenuDoughs', () => {
   });
 
   it('should test addToCart button', async () => {
-    const user = userEvent.setup();
     const buttonTextState = {
       before: 'Colocar no carrinho',
       after: 'Adicionado no carrinho',
     };
     const firstButton = screen.getAllByText(buttonTextState.before)[0];
 
-    await user.click(firstButton);
+    await userEvent.click(firstButton);
     expect(screen.getByText(buttonTextState.after)).toBeInTheDocument();
   });
 });

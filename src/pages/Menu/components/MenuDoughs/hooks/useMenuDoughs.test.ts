@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react';
-import { ResultHook } from '../../../../../shared/utils/types';
+import { ResultHook } from '@shared/utils/types';
+import { MenuProvider } from '@application/menu';
 import { useMenuDoughs } from './useMenuDoughs';
-import { MenuProvider } from '../../../../../application/menu';
 
 let resultHook: ResultHook<typeof useMenuDoughs>;
 

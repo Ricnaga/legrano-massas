@@ -3,9 +3,9 @@ import {
   renderWithTheme,
   screen,
   userEvent,
-} from '../../../../application/test/testing-library';
+} from '@application/test/testing-library';
+import { MenuReducerData } from '@application/menu/menuReducer';
 import { TopbarCartItems } from './TopbarCartItems';
-import { MenuReducerData } from '../../../../application/menu/menuReducer';
 
 let cartItems: Array<MenuReducerData> = [
   {
