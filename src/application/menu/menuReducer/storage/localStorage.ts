@@ -1,5 +1,5 @@
+import { STORAGE_KEY } from '@application/config';
 import { MenuReducerData } from '..';
-import { STORAGE_KEY } from '../../../config';
 
 export const saveCartItems = (selectedCartItems: Array<MenuReducerData>) =>
   localStorage.setItem(STORAGE_KEY, JSON.stringify(selectedCartItems));
