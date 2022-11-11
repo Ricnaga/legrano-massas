@@ -21,9 +21,9 @@
   },
   "scripts": {
     "dev": "craco start --config .config/craco.config.ts",
-    "build": "craco build",
-    "react:test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "build": "craco build --config .config/craco.config.ts",
+    "craco:test": "craco test --config .config/craco.config.ts",
+    "eject": "craco eject --config .config/craco.config.ts",
     "lint": "eslint src --ext .tsx --ext .ts",
     "lint:fix": "yarn lint --fix",
     "typecheck": "bash -c tsc --project tsconfig.json --noEmit",
