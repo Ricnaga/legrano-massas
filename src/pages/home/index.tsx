@@ -1,5 +1,7 @@
+import Typography  from '@mui/material/Typography'
+
 function Home() {
-  return <h1>Home</h1>;
+  return <Typography variant='h1'>Home</Typography>;
 }
 
 export default Home

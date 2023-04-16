@@ -4,7 +4,7 @@ import {
   CssBaseline,
   ThemeProvider as MaterialUIProvider,
 } from '@mui/material';
-import { theme } from '../theme/theme';
+import { theme } from '../theme/mui';
 
 type MuiProviderProps = Partial<Record<'children', ReactNode>>;
 
