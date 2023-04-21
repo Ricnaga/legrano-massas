@@ -7,7 +7,7 @@ export const ibarra = Ibarra_Real_Nova({
   fallback: ["Helvetica", "Arial", "sans-serif"],
 });
 
-const lightTheme = {
+export const lightTheme = {
   palette: {
     mode: "light",
     background: {

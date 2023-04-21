@@ -7,7 +7,7 @@ publish_mode: editorial_workflow
 media_folder: "assets/uploads"
 
 collections:
-  - name: "" 
+  - name: "home" 
     label: "Home"
     folder: "src"
     fields:
