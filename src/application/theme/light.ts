@@ -1,4 +1,3 @@
-import { createTheme, ThemeOptions } from "@mui/material";
 import { Ibarra_Real_Nova } from "next/font/google";
 
 export const ibarra = Ibarra_Real_Nova({
@@ -8,7 +7,7 @@ export const ibarra = Ibarra_Real_Nova({
   fallback: ["Helvetica", "Arial", "sans-serif"],
 });
 
-const lightTheme: ThemeOptions = {
+const lightTheme = {
   palette: {
     mode: "light",
     background: {
@@ -96,4 +95,3 @@ const lightTheme: ThemeOptions = {
   },
 };
 
-export const theme = createTheme(lightTheme);

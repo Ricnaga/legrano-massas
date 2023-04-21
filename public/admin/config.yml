@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: nextjs
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/uploads"
+
+collections:
+  - name: "" 
+    label: "Home"
+    folder: "src"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
