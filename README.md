@@ -1,61 +1,39 @@
-<div align="center">
-<img src="./cover.png" />
-<img src="./mobile.png" />
-</div>
+<!-- https://medium.com/@albertchu539/how-to-make-an-app-drawer-with-react-hooks-and-css-1338ae57afb4 -->
+<!-- https://lumin8media.com/blog/build-a-sliding-drawer-react-typescript -->
 
-<div align="right">
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-#### - Projeto finalizado 🟢
+## Getting Started
 
-</div>
-<div align="center">
-
-# Legrano | Culinária artesanal
-
-</div>
-
-<img src="https://img.shields.io/github/license/Ricnaga/legrano-massas?&style=for-the-badge"/>
-
-### <div align="center"> Aplicação em Reactjs/Typescript, abordando conceitos sobre: </div>
-
-- [TypeScript](https://www.typescriptlang.org/) - Tipagens
-- [Reactjs](https://pt-br.reactjs.org/) - useState e useReducer
-- [Localstorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage) - Armazenamento de dados do carrinho
-- [React Router DOM](https://reactrouter.com/docs/en/v6/getting-started/overview) - Roteamento de páginas
-- [Mui](https://mui.com/) Componentes personalizados
-- [ESLint](https://eslint.org/) - linter para código
-- [Prettier](https://prettier.io/) - formatador de código
-- [Husky](https://typicode.github.io/husky/#/) - Capturar determinado momento de um commit
-- [Lint-staged](https://github.com/okonet/lint-staged) - Executar ações em determinado momento de um commit
-- [Github Actions](https://github.com/features/actions) - Executar verificações durante a atualização de uma nova dependêcnia via github
-- [Testing library](https://testing-library.com/) - testes unitários de hooks e components
-- [Craco](https://craco.js.org/) - Sobreescrita da configuração default do [create-react-app](https://create-react-app.dev/)
-
-## <div align="center">Requisitos</div>
-
-Para executar a aplicação é necessário instalar algumas ferramentas tais como um editor de códigos para realizar compilação dos mesmos. Nesse projeto foi utilizado o [Visual Studio Code](https://code.visualstudio.com/), [NodeJS](https://nodejs.org/en/) para compilação do código, [git](https://git-scm.com/downloads) para baixar o repositório e baixar todas as dependências necessárias.
+First, run the development server:
 
 ```bash
-# Clone este repositório(caso ja tenha feito isso no passo anterior, pule para o próximo comando)
-$ git clone <https://github.com/Ricnaga/legrano-massas>
-
-# Acesse a pasta do projeto no terminal
-$ cd legrano-massas
-
-# Instale as dependências
-$ yarn (ou npm install)
-
-# Inicie a aplicação
-$ yarn dev (ou npm run dev)
-
-# A aplicação abrirá automaticamente um navegador com o endereço <http://localhost:3000>
-
-# Para executar os testes digite
-$ yarn test (ou npm run test)
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-#
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## <div align="center">Demonstração</div>
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### <div align="center"> [https://legranomassas.netlify.app](https://legranomassas.netlify.app/)</div>
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
