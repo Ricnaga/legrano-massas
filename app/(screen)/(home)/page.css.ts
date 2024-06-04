@@ -1,7 +1,7 @@
 import { globalVars } from '@/app/application/theme/index.css';
 import { style } from '@vanilla-extract/css';
 
-export const container = style({
+export const containerStyles = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   gap: '2rem',

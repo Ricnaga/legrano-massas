@@ -11,9 +11,20 @@ import {
 } from './menucard.css';
 import { AddCartIcon } from '@/app/shared/icons';
 import { MenuActionsType } from '@/app/contexts/menu/hooks/useMenuProvider';
+import { convertToBRL } from '@/app/shared/utils/currency';
 
 export function MenuCard() {
-  const { filteredCategories, dispatch, categoryId } = useMenuContext();
+  const { state, dispatch, categoryId } = useMenuContext();
+
+  const filteredCategories =
+    state
+      .filter((category) => Object.is(category.id, categoryId))
+      .at(0)
+      ?.items.map((item) => ({
+        ...item,
+        categoryId,
+        price: convertToBRL(item.price),
+      })) || [];
 
   return (
     <div className={container({ hasScroll: filteredCategories.length > 4 })}>
@@ -31,7 +42,12 @@ export function MenuCard() {
               onClick={() =>
                 dispatch({
                   action: MenuActionsType.ADD_TO_CART,
-                  payload: { categoryId, itemId: category.id },
+                  payload: {
+                    categoryId: !!category.categoryId
+                      ? category.categoryId
+                      : null,
+                    itemId: category.id,
+                  },
                 })
               }
             >

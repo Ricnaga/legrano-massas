@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
-import { CartIcon } from '../../icons';
-import { container, linkStyles } from './bottomBar.css';
 import { Drawer } from '..';
+import { CartIcon } from '../../icons';
+import { ItemCard } from './_components/ItemCard/ItemCard';
+import { container, linkStyles } from './bottomBar.css';
 
 const items: Array<{ route: string; children: ReactNode }> = [
   { route: '/', children: 'Home' },
@@ -24,7 +25,7 @@ export function BottomBar() {
   return (
     <>
       <Drawer isOpen={isOpen} onClose={() => setAsOpen(false)}>
-        <p>Oi</p>
+        <ItemCard />
       </Drawer>
       <nav className={container}>
         {items.map((item) =>

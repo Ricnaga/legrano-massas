@@ -15,6 +15,7 @@ export type MenuItems = {
   weight: string;
   amount: number;
   selected: boolean;
+  categoryId?: string;
 };
 
 export type MenuReducerType = {
@@ -126,38 +127,21 @@ const initialState = getCartItems() || categories;
 export type MenuContextProps = {
   state: MenuState;
   dispatch: Dispatch<MenuActions>;
-  categoryId: string;
   setCategoryId: Dispatch<SetStateAction<string>>;
-  filteredCategories: MenuItems[];
+  categoryId: string;
 };
 
 export const useMenuProvider = (baseProps: PropsWithChildren) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [categoryId, setCategoryId] = useState<string>(initialState[0].id);
 
-  const filteredCategories: Array<MenuItems> =
-    state
-      .filter((category) => Object.is(category.id, categoryId))
-      .at(0)
-      ?.items.map((item) => ({
-        ...item,
-        price:
-          typeof item.price === 'number'
-            ? new Intl.NumberFormat('pt-br', {
-                style: 'currency',
-                currency: 'BRL',
-              }).format(item.price)
-            : item.price,
-      })) || [];
-
   const providerProps: ProviderProps<MenuContextProps> = {
     ...baseProps,
     value: {
       state,
-      categoryId,
       dispatch,
       setCategoryId,
-      filteredCategories,
+      categoryId,
     },
   };
 
