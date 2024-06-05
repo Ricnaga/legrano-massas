@@ -36,7 +36,7 @@ export type MenuState = Array<MenuReducerType>;
 type MenuActions = {
   action: MenuActionsType;
   payload: {
-    categoryId: string | null;
+    categoryId?: string;
     itemId: string | null;
   };
 };
