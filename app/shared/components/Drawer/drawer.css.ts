@@ -121,7 +121,7 @@ export const closeButton = recipe({
     border: 'none',
     borderRadius: '100%',
 
-    padding: '1.2rem',
+    padding: '.6rem',
 
     cursor: 'pointer',
 

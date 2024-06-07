@@ -1,31 +1,27 @@
 'use client';
 
-import * as React from 'react';
+import { CloseIcon } from '../../icons';
+import { UseDrawerProps, useDrawer } from './hooks/useDrawer';
 
-import { closeButton, content, drawer } from './drawer.css';
+interface DrawerProps extends UseDrawerProps {}
 
-export enum DrawerSide {
-  left = 'left',
-  right = 'right',
-}
+export function Drawer(props: DrawerProps) {
+  const {
+    isOpen,
+    DrawerElement,
+    getDrawerProps,
+    ButtonElement,
+    getButtonProps,
+    ContentElement,
+    getContentProps,
+  } = useDrawer(props);
 
-type Props = {
-  isOpen: boolean;
-  children: React.ReactNode;
-  side?: keyof typeof DrawerSide;
-  onClose: () => void;
-};
-
-export function Drawer({
-  isOpen,
-  children,
-  side = DrawerSide.right,
-  onClose,
-}: Props) {
   return (
-    <div data-opened={isOpen} className={drawer({ side })}>
-      <button onClick={onClose} className={closeButton()}>X</button>
-      <div className={content()}>{children}</div>
-    </div>
+    <DrawerElement data-opened={isOpen} {...getDrawerProps()}>
+      <ButtonElement {...getButtonProps()}>
+        <CloseIcon />
+      </ButtonElement>
+      <ContentElement {...getContentProps()} />
+    </DrawerElement>
   );
 }
