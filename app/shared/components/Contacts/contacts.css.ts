@@ -10,6 +10,10 @@ export const containerStyles = style({
   marginBottom: '4rem',
 });
 
+const WHATSAPP_COLOR = '#25D366';
+const INSTAGRAM_COLOR = '#F00073';
+const FACEBOOK_COLOR = '#1877F2';
+
 export const linkStyles = recipe({
   base: [
     {
@@ -52,22 +56,22 @@ export const linkStyles = recipe({
   variants: {
     variant: {
       WhatsApp: {
-        color: '#25D366',
+        color: WHATSAPP_COLOR,
         ':hover': {
-          background: '#25D366',
+          background: WHATSAPP_COLOR,
         },
       },
 
       Instagram: {
-        color: '#F00073',
+        color: INSTAGRAM_COLOR,
         ':hover': {
-          background: '#F00073',
+          background: INSTAGRAM_COLOR,
         },
       },
       Facebook: {
-        color: '#1877F2',
+        color: FACEBOOK_COLOR,
         ':hover': {
-          background: '#1877F2',
+          background: FACEBOOK_COLOR,
         },
       },
     },

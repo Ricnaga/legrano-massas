@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Karla } from 'next/font/google';
 import './application/theme/global.css';
+import { ComposeProviders } from './contexts/compose';
 import { BottomBar, Contacts, Container } from './shared/components';
-import { MenuProvider } from './contexts/menu';
 
 const karla = Karla({ subsets: ['latin'] });
 
@@ -20,11 +20,11 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={karla.className}>
         <Container>
-          <MenuProvider>
+          <ComposeProviders>
             <Contacts />
             {children}
             <BottomBar />
-          </MenuProvider>
+          </ComposeProviders>
         </Container>
       </body>
     </html>
