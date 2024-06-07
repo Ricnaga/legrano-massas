@@ -1,26 +1,13 @@
-import { MenuItems } from '@/app/contexts/menu/hooks/useMenuProvider';
-import { ReactNode } from 'react';
-import {
-  container,
-  card,
-  title,
-  description,
-  DescriptionVariants,
-} from './productcard.css';
+import { UseProductCardProps, useProductCard } from './hooks/useProductCard';
+import { card, container, description, title } from './productcard.css';
 
-type ProductCardProps<T = MenuItems> = DescriptionVariants & {
-  children: (data: T) => ReactNode;
-  categories: T[];
-  itemsToScroll?: number;
-};
+interface ProductCardProps extends UseProductCardProps {}
 
 export function ProductCard(props: ProductCardProps) {
-  const { children, categories, itemsToScroll = 6, variant = 'Menu' } = props;
+  const { categories, children, hasScroll, variant } = useProductCard(props);
 
   return (
-    <div
-      className={container({ hasScroll: categories.length > itemsToScroll })}
-    >
+    <div className={container({ hasScroll })}>
       {categories.map((category) => (
         <div className={card()} key={Math.random()}>
           <p className={title()}>
