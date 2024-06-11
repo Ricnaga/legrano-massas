@@ -1,15 +1,29 @@
 import { globalVars } from '@/app/application/theme/index.css';
+import { breakpoints } from '@/app/application/theme/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const containerStyles = style({
   display: 'grid',
-  gridTemplateColumns: 'repeat(2, 1fr)',
+  gridTemplateColumns: 'repeat(1, 1fr)',
   gap: '2rem',
+
+  '@media': {
+    [breakpoints.xl]: {
+      gridTemplateColumns: 'repeat(2, 1fr)',
+    },
+  },
 });
 
 export const imgStyles = style({
   width: '100%',
   height: '100%',
+  padding: '0 2rem',
+
+  '@media': {
+    [breakpoints.lg]: {
+      padding: 0,
+    },
+  },
 });
 
 export const bibliographyStyles = style({
@@ -19,6 +33,13 @@ export const bibliographyStyles = style({
   flexDirection: 'column',
 
   gap: '2rem',
+  padding: '0 2rem',
+
+  '@media': {
+    [breakpoints.lg]: {
+      padding: 0,
+    },
+  },
 });
 
 export const descriptionStyles = style({
@@ -31,7 +52,7 @@ export const descriptionStyles = style({
   textAlign: 'justify',
 
   overflowY: 'scroll',
-  maxHeight: '30rem',
+  maxHeight: '40rem',
 
   '::-webkit-scrollbar': {
     width: '10px',
@@ -48,5 +69,11 @@ export const descriptionStyles = style({
   '::-webkit-scrollbar-thumb': {
     background: globalVars.color.yellow,
     borderRadius: '8px',
+  },
+
+  '@media': {
+    [breakpoints.lg]: {
+      maxHeight: '30rem',
+    },
   },
 });
