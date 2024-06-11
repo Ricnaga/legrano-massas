@@ -6,5 +6,5 @@ interface ContainerProps {
 }
 
 export function Container(props: ContainerProps) {
-  return <div {...props} className={styles} />;
+  return <div {...props} className={styles()} />;
 }

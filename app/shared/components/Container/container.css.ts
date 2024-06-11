@@ -1,6 +1,15 @@
-import { style } from '@vanilla-extract/css';
+import { breakpoints } from '@/app/application/theme/theme.css';
+import { recipe } from '@vanilla-extract/recipes';
 
-export const styles = style({
-  padding: '2rem 2rem 0',
-  height: '100%',
+export const styles = recipe({
+  base: [
+    {
+      '@media': {
+        [breakpoints.lg]: {
+          height: '100%',
+          padding: '2rem 2rem 0',
+        },
+      },
+    },
+  ],
 });
