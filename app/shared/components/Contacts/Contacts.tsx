@@ -25,7 +25,7 @@ const items = [
 
 export function Contacts() {
   return (
-    <div className={containerStyles}>
+    <div className={containerStyles()}>
       {items.map((item) => (
         <Link
           key={item.name}
