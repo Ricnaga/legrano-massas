@@ -27,7 +27,7 @@ export function BottomBar() {
       <Drawer isOpen={isOpen} onClose={() => setAsOpen(false)}>
         <ItemCard />
       </Drawer>
-      <nav className={container}>
+      <nav className={container()}>
         {items.map((item) =>
           item.route !== '/cart' ? (
             <Link

@@ -1,21 +1,39 @@
 import { globalVars } from '@/app/application/theme/index.css';
-import { style } from '@vanilla-extract/css';
+import { breakpoints } from '@/app/application/theme/theme.css';
 import { recipe } from '@vanilla-extract/recipes';
 
-export const container = style({
-  position: 'absolute',
-  bottom: 0,
-  right: '64px',
+export const container = recipe({
+  base: [
+    {
+      position: 'absolute',
+      bottom: 0,
 
-  display: 'flex',
-  alignItems: 'center',
-  justifyItems: 'center',
+      width: '100%',
 
-  borderRadius: '16px 16px 0 0',
-  boxShadow: '0px 0px 4px 8px :color'.replace(
-    ':color',
-    globalVars.color.shadowWhite,
-  ),
+      display: 'flex',
+
+      boxShadow: '0px 0px 4px 8px :color'.replace(
+        ':color',
+        globalVars.color.shadowWhite,
+      ),
+
+      '@media': {
+        [breakpoints.lg]: {
+          position: 'absolute',
+          bottom: 0,
+          right: '64px',
+
+          width: 'fit-content',
+
+          borderRadius: '16px 16px 0 0',
+          boxShadow: '0px 0px 4px 8px :color'.replace(
+            ':color',
+            globalVars.color.shadowWhite,
+          ),
+        },
+      },
+    },
+  ],
 });
 
 export const linkStyles = recipe({
@@ -32,7 +50,7 @@ export const linkStyles = recipe({
       fontSize: '1.125rem',
       fontWeight: 500,
 
-      width: '7.75rem',
+      width: '100%',
       height: '4rem',
 
       display: 'flex',
@@ -46,11 +64,16 @@ export const linkStyles = recipe({
       transition: 'all',
       transitionDuration: '0.2s',
 
-      ':first-child': {
-        borderRadius: '16px 0 0 0',
-      },
-      ':last-child': {
-        borderRadius: '0 16px 0 0',
+      '@media': {
+        [breakpoints.lg]: {
+          width: '7.75rem',
+          ':first-child': {
+            borderRadius: '16px 0 0 0',
+          },
+          ':last-child': {
+            borderRadius: '0 16px 0 0',
+          },
+        },
       },
     },
   ],
