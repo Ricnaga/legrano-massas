@@ -3,7 +3,7 @@ import { RecipeVariants, recipe } from '@vanilla-extract/recipes';
 
 export const container = recipe({
   base: {
-    background: globalVars.color.green,
+    background: globalVars.color.green200,
 
     padding: '1rem',
 
@@ -15,7 +15,7 @@ export const container = recipe({
 
     boxShadow: '0px 0px 4px 4px :color'.replace(
       ':color',
-      globalVars.color.shadowGreen,
+      globalVars.color.green100,
     ),
   },
   variants: {
@@ -31,17 +31,23 @@ export const container = recipe({
         '::-webkit-scrollbar-track': {
           boxShadow: 'inset 0 0 6px :color'.replace(
             ':color',
-            globalVars.color.white,
+            globalVars.color.white200,
           ),
           borderRadius: '8px',
         },
 
         '::-webkit-scrollbar-thumb': {
-          background: globalVars.color.white,
+          background: globalVars.color.white200,
           borderRadius: '8px',
         },
       },
     },
+  },
+});
+
+export const typography = recipe({
+  base: {
+    textAlign: 'center',
   },
 });
 
@@ -58,17 +64,17 @@ export const card = recipe({
     flexDirection: 'column',
     gap: '0.6rem',
 
-    color: globalVars.color.white,
+    color: globalVars.color.white200,
     letterSpacing: '.1rem',
 
     selectors: {
       '&:hover': {
-        color: globalVars.color.yellow,
+        color: globalVars.color.yellow200,
 
-        background: globalVars.color.white,
+        background: globalVars.color.white200,
         boxShadow: '0px 0px 4px 2px :color'.replace(
           ':color',
-          globalVars.color.shadowDark,
+          globalVars.color.dark100,
         ),
       },
     },

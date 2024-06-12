@@ -2,7 +2,7 @@ import { globalVars } from '@/app/application/theme/index.css';
 import { RecipeVariants, recipe } from '@vanilla-extract/recipes';
 
 export const styles = recipe({
-  base: [{ letterSpacing: '.2rem', color: globalVars.color.white }],
+  base: [{ letterSpacing: '.2rem', color: globalVars.color.white200 }],
   variants: {
     variant: {
       h1: {

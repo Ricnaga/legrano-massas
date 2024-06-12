@@ -15,31 +15,31 @@ export const addCartButton = recipe({
 
     cursor: 'pointer',
 
-    background: globalVars.color.yellow,
+    background: globalVars.color.yellow200,
 
     borderRadius: '28px',
     border: 'none',
 
     padding: '1rem 1.6rem',
 
-    color: globalVars.color.white,
+    color: globalVars.color.white200,
     fontSize: '1.5rem',
     fontWeight: 700,
 
     boxShadow: '0px 0px 4px 4px :color'.replace(
       ':color',
-      globalVars.color.shadowYellow,
+      globalVars.color.yellow100,
     ),
 
     selectors: {
       '&:hover:not(:disabled)': {
-        background: globalVars.color.green,
+        background: globalVars.color.green200,
 
-        color: globalVars.color.yellow,
+        color: globalVars.color.yellow200,
 
         boxShadow: '0px 0px 4px 4px :color'.replace(
           ':color',
-          globalVars.color.shadowGreen,
+          globalVars.color.green100,
         ),
       },
       '&:active': {
@@ -47,7 +47,7 @@ export const addCartButton = recipe({
       },
 
       '&:disabled': {
-        background: globalVars.color.green,
+        background: globalVars.color.green200,
         cursor: 'not-allowed',
       },
     },
@@ -56,6 +56,6 @@ export const addCartButton = recipe({
 
 export const cartIcon = recipe({
   base: {
-    fill: globalVars.color.white,
+    fill: globalVars.color.white200,
   },
 });

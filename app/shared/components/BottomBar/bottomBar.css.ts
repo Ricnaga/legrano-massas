@@ -14,7 +14,7 @@ export const container = recipe({
 
       boxShadow: '0px 0px 4px 8px :color'.replace(
         ':color',
-        globalVars.color.shadowWhite,
+        globalVars.color.white100,
       ),
 
       '@media': {
@@ -28,7 +28,7 @@ export const container = recipe({
           borderRadius: '16px 16px 0 0',
           boxShadow: '0px 0px 4px 8px :color'.replace(
             ':color',
-            globalVars.color.shadowWhite,
+            globalVars.color.white100,
           ),
         },
       },
@@ -41,11 +41,11 @@ export const linkStyles = recipe({
     {
       cursor: 'pointer',
 
-      color: globalVars.color.yellow,
+      color: globalVars.color.yellow200,
       letterSpacing: '.1rem',
       textShadow: '0px 4px 8px :color'.replace(
         ':color',
-        globalVars.color.shadowRed,
+        globalVars.color.red100,
       ),
       fontSize: '1.125rem',
       fontWeight: 500,
@@ -57,7 +57,7 @@ export const linkStyles = recipe({
       alignItems: 'center',
       justifyContent: 'center',
 
-      background: globalVars.color.white,
+      background: globalVars.color.white200,
 
       textDecoration: 'none',
 
@@ -80,7 +80,7 @@ export const linkStyles = recipe({
   variants: {
     isActive: {
       true: {
-        background: globalVars.color.green,
+        background: globalVars.color.green200,
         ':hover': {
           filter: 'brightness(110%)',
         },

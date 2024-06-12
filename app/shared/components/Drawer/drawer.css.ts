@@ -21,7 +21,7 @@ export const drawer = recipe({
 
     transition: 'all 0.3s ease-in-out',
 
-    background: globalVars.color.white,
+    background: globalVars.color.white200,
 
     padding: '1rem',
   },

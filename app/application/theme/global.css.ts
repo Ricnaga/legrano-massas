@@ -14,5 +14,5 @@ globalStyle('*', {
 
 globalStyle('body', {
   height: '100vh',
-  background: globalVars.color.dark,
+  background: globalVars.color.dark200,
 });

@@ -1,24 +1,14 @@
 export const colors = {
-  dark: '#000814',
-  get shadowDark() {
-    return this.dark.concat('80');
-  },
-  white: '#F1FAEE',
-  get shadowWhite() {
-    return this.white.concat('42');
-  },
-  yellow: '#FCA311',
-  get shadowYellow() {
-    return this.yellow.concat('42');
-  },
-  green: '#538D22',
-  get shadowGreen() {
-    return this.green.concat('80');
-  },
-  red: '#FF0101',
-  get shadowRed() {
-    return this.red.concat('42');
-  },
+  dark100: '#00081480',
+  dark200: '#000814',
+  white100: '#F1FAEE42',
+  white200: '#F1FAEE',
+  yellow100: '#FCA31142',
+  yellow200: '#FCA311',
+  green100: '#538D2280',
+  green200: '#538D22',
+  red100: '#FF010142',
+  red200: '#FF0101',
 };
 
 export const breakpoints = {

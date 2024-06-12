@@ -57,20 +57,20 @@ export const triggerStyles = recipe({
   variants: {
     isActive: {
       true: {
-        color: globalVars.color.yellow,
+        color: globalVars.color.yellow200,
         textShadow: '0px 4px 8px :color'.replace(
           ':color',
-          globalVars.color.shadowRed,
+          globalVars.color.red100,
         ),
         fontWeight: 700,
 
-        background: globalVars.color.green,
+        background: globalVars.color.green200,
 
         maxHeight: '3.75rem',
 
         boxShadow: '0px 0px 16px 4px :color'.replace(
           ':color',
-          globalVars.color.shadowGreen,
+          globalVars.color.green100,
         ),
 
         borderRadius: '32px',
@@ -85,10 +85,10 @@ export const triggerStyles = recipe({
         },
       },
       false: {
-        color: globalVars.color.green,
+        color: globalVars.color.green200,
         textShadow: '0px 4px 4px :color'.replace(
           ':color',
-          globalVars.color.shadowYellow,
+          globalVars.color.yellow100,
         ),
 
         fontWeight: 400,

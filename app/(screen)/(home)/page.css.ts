@@ -61,13 +61,13 @@ export const descriptionStyles = style({
   '::-webkit-scrollbar-track': {
     boxShadow: 'inset 0 0 6px :color'.replace(
       ':color',
-      globalVars.color.yellow,
+      globalVars.color.yellow200,
     ),
     borderRadius: '8px',
   },
 
   '::-webkit-scrollbar-thumb': {
-    background: globalVars.color.yellow,
+    background: globalVars.color.yellow200,
     borderRadius: '8px',
   },
 

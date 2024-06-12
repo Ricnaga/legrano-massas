@@ -43,7 +43,7 @@ export const linkStyles = recipe({
 
       border: 'none',
 
-      background: globalVars.color.white,
+      background: globalVars.color.white200,
       padding: '1rem',
 
       fontSize: '1.2rem',
@@ -54,10 +54,10 @@ export const linkStyles = recipe({
       ':hover': {
         boxShadow: '0px 0px 4px 8px :color'.replace(
           ':color',
-          globalVars.color.shadowWhite,
+          globalVars.color.white100,
         ),
         transitionDuration: '0.2s',
-        color: globalVars.color.white,
+        color: globalVars.color.white200,
       },
 
       textDecoration: 'none',
@@ -77,7 +77,7 @@ export const linkStyles = recipe({
           border: 'none',
           borderRadius: '12px',
 
-          background: globalVars.color.white,
+          background: globalVars.color.white200,
           padding: '1rem',
 
           fontSize: '1.2rem',
@@ -88,10 +88,10 @@ export const linkStyles = recipe({
           ':hover': {
             boxShadow: '0px 0px 4px 8px :color'.replace(
               ':color',
-              globalVars.color.shadowWhite,
+              globalVars.color.white100,
             ),
             transitionDuration: '0.2s',
-            color: globalVars.color.white,
+            color: globalVars.color.white200,
           },
 
           textDecoration: 'none',
