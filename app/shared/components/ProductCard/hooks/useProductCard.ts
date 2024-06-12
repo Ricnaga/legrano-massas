@@ -13,6 +13,7 @@ export const useProductCard = (props: UseProductCardProps) => {
 
   return {
     children,
+    noCategories: variant === 'Cart' && !categories.length,
     categories,
     hasScroll: categories.length > itemsToScroll,
     variant,
