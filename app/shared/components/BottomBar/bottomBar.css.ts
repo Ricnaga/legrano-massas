@@ -19,8 +19,6 @@ export const container = recipe({
 
       '@media': {
         [breakpoints.lg]: {
-          position: 'absolute',
-          bottom: 0,
           right: '64px',
 
           width: 'fit-content',
