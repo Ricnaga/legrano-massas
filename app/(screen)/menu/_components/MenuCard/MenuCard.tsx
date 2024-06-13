@@ -2,10 +2,10 @@
 
 import { useMenuContext } from '@/app/contexts/menu';
 import { MenuActionsType } from '@/app/contexts/menu/hooks/useMenuProvider';
-import { ProductCard } from '@/app/shared/components';
+import { Button, ProductCard } from '@/app/shared/components';
 import { AddCartIcon } from '@/app/shared/icons';
 import { convertToBRL } from '@/app/shared/utils/currency';
-import { addCartButton, cartIcon } from './menucard.css';
+import { cartIcon } from './menucard.css';
 
 export function MenuCard() {
   const { state, dispatch, categoryId } = useMenuContext();
@@ -23,8 +23,9 @@ export function MenuCard() {
   return (
     <ProductCard categories={filteredCategories}>
       {(category) => (
-        <button
-          className={addCartButton()}
+        <Button
+          radius="full"
+          isIconButton
           disabled={category.selected}
           onClick={() =>
             dispatch({
@@ -38,7 +39,7 @@ export function MenuCard() {
         >
           Adicionar ao carrinho{' '}
           <AddCartIcon pathProps={{ className: cartIcon() }} />
-        </button>
+        </Button>
       )}
     </ProductCard>
   );
