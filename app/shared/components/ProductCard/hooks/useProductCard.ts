@@ -15,7 +15,7 @@ export const useProductCard = (props: UseProductCardProps) => {
     children,
     noCategories: variant === 'Cart' && !categories.length,
     categories,
-    hasScroll: categories.length > itemsToScroll,
+    hasScroll: categories.length >= itemsToScroll,
     variant,
   };
 };
