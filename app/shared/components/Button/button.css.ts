@@ -103,7 +103,31 @@ export const styles = recipe({
           },
         },
       },
-      error: {},
+      error: {
+        background: globalVars.color.red200,
+        color: globalVars.color.yellow200,
+        boxShadow: '0px 0px 4px 4px :color'.replace(
+          ':color',
+          globalVars.color.dark100,
+        ),
+
+        selectors: {
+          '&:hover:not(:disabled)': {
+            background: globalVars.color.white200,
+
+            color: globalVars.color.red200,
+
+            boxShadow: '0px 0px 2px 2px :color'.replace(
+              ':color',
+              globalVars.color.red200,
+            ),
+          },
+
+          '&:disabled': {
+            background: globalVars.color.white100,
+          },
+        },
+      },
     },
   },
   defaultVariants: {

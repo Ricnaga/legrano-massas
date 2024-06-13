@@ -81,6 +81,7 @@ export function ItemCard() {
             Total: {totalPrice}
           </Typography>
           <Button
+            variant="error"
             onClick={() =>
               dispatch({
                 action: MenuActionsType.CLEAR_CART,
