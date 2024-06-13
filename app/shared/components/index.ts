@@ -1,4 +1,6 @@
 export * from './BottomBar/BottomBar';
+export * from './Button/Button';
+export * from './Card/Card';
 export * from './Contacts/Contacts';
 export * from './Container/Container';
 export * from './Drawer/Drawer';

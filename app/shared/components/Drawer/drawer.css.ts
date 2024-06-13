@@ -112,7 +112,7 @@ export const drawer = recipe({
 
 export const content = recipe({
   base: {
-    margin: '4rem 1rem 1rem',
+    margin: '2rem 1rem 1rem',
   },
 });
 
