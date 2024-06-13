@@ -4,6 +4,17 @@ import { RecipeVariants, recipe } from '@vanilla-extract/recipes';
 export const styles = recipe({
   base: [{ letterSpacing: '.2rem', color: globalVars.color.white200 }],
   variants: {
+    textAlign: {
+      left: {
+        textAlign: 'left',
+      },
+      center: {
+        textAlign: 'center',
+      },
+      right: {
+        textAlign: 'right',
+      },
+    },
     variant: {
       h1: {
         fontSize: '2.4rem',
@@ -51,6 +62,10 @@ export const styles = recipe({
         lineHeight: '16px',
       },
     },
+  },
+  defaultVariants: {
+    textAlign: 'left',
+    variant: 'p',
   },
 });
 

@@ -8,10 +8,14 @@ type TypographyProps = TypographyVariants & {
   children: ReactNode;
 };
 
-export function Typography({ variant, ...rest }: TypographyProps) {
+export function Typography({
+  textAlign = 'left',
+  variant = 'p',
+  ...rest
+}: TypographyProps) {
   const { Element, getProps } = useElement({
-    element: variant || 'p',
-    props: { ...rest, className: styles({ variant: variant || 'p' }) },
+    element: variant,
+    props: { ...rest, className: styles({ variant, textAlign }) },
   });
 
   const ref = useRef(null);
