@@ -1,12 +1,7 @@
+import { Card } from '@/components';
 import { Typography } from '../Typography/Typography';
 import { UseProductCardProps, useProductCard } from './hooks/useProductCard';
-import {
-  card,
-  container,
-  description,
-  title,
-  typography,
-} from './productcard.css';
+import { card, description, title, typography } from './productcard.css';
 
 interface ProductCardProps extends UseProductCardProps {}
 
@@ -15,7 +10,7 @@ export function ProductCard(props: ProductCardProps) {
     useProductCard(props);
 
   return (
-    <div className={container({ hasScroll })}>
+    <Card hasScroll={hasScroll}>
       {noCategories ? (
         <div className={typography()}>
           <Typography variant="h3">Nenhum produto selecionado</Typography>
@@ -34,6 +29,6 @@ export function ProductCard(props: ProductCardProps) {
           </div>
         ))
       )}
-    </div>
+    </Card>
   );
 }
