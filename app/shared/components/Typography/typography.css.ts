@@ -4,7 +4,7 @@ import { RecipeVariants, recipe } from '@vanilla-extract/recipes';
 export const styles = recipe({
   base: [{ letterSpacing: '.2rem', color: globalVars.color.white200 }],
   variants: {
-    textAlign: {
+    align: {
       left: {
         textAlign: 'left',
       },
@@ -64,7 +64,7 @@ export const styles = recipe({
     },
   },
   defaultVariants: {
-    textAlign: 'left',
+    align: 'left',
     variant: 'p',
   },
 });

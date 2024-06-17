@@ -9,13 +9,13 @@ type TypographyProps = TypographyVariants & {
 };
 
 export function Typography({
-  textAlign = 'left',
+  align = 'left',
   variant = 'p',
   ...rest
 }: TypographyProps) {
   const { Element, getProps } = useElement({
     element: variant,
-    props: { ...rest, className: styles({ variant, textAlign }) },
+    props: { ...rest, className: styles({ variant, align }) },
   });
 
   const ref = useRef(null);

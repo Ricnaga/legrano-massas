@@ -1,12 +1,6 @@
 import { globalVars } from '@/app/application/theme/index.css';
 import { RecipeVariants, recipe } from '@vanilla-extract/recipes';
 
-export const typography = recipe({
-  base: {
-    textAlign: 'center',
-  },
-});
-
 export const card = recipe({
   base: {
     transition: 'all',
