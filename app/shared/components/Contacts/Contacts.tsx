@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from '../../icons';
 import { linkStyles, containerStyles } from './contacts.css';
 
-const items = [
+export const contactItems = [
   {
     name: WhatsAppIcon.name.slice(0, -4),
     className: linkStyles({ variant: 'WhatsApp' }),
@@ -26,7 +26,7 @@ const items = [
 export function Contacts() {
   return (
     <div className={containerStyles()}>
-      {items.map((item) => (
+      {contactItems.map((item) => (
         <Link
           key={item.name}
           className={item.className}
