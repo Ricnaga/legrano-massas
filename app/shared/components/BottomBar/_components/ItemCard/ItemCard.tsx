@@ -1,36 +1,15 @@
 'use client';
 
-import { useMenuContext } from '@/app/contexts/menu';
 import { MenuActionsType } from '@/app/contexts/menu/hooks/useMenuProvider';
 import { WhatsAppIcon } from '@/app/shared/icons';
-import { convertToBRL } from '@/app/shared/utils/currency';
 import { Button, Card, ProductCard, Typography } from '@/components';
-import { amountContainer, container } from './itemcard.css';
+import { useItemCard } from './hooks/useItemCard';
+import { amountContainer, container, link } from './itemcard.css';
+import Link from 'next/link';
 
 export function ItemCard() {
-  const { dispatch, state } = useMenuContext();
-
-  const formattedState = state.flatMap((categories) =>
-    categories.items
-      .filter((category) => category.selected)
-      .map((category) => ({
-        ...category,
-        categoryId: categories.id,
-      })),
-  );
-
-  const selectedCategories = formattedState.map((category) => ({
-    ...category,
-    price: convertToBRL(category.price),
-  }));
-
-  const totalPrice = convertToBRL(
-    formattedState.reduce(
-      (accumulator, currentValue) =>
-        accumulator + +currentValue.price * currentValue.amount,
-      0,
-    ),
-  );
+  const { selectedCategories, totalPrice, onClear, onAmount, href } =
+    useItemCard();
 
   return (
     <div className={container()}>
@@ -45,12 +24,10 @@ export function ItemCard() {
               radius="full"
               isIconButton
               onClick={() =>
-                dispatch({
+                onAmount({
                   action: MenuActionsType.ADD_AMOUNT,
-                  payload: {
-                    categoryId: category.categoryId,
-                    itemId: category.id,
-                  },
+                  categoryId: category.categoryId,
+                  itemId: category.id,
                 })
               }
             >
@@ -61,12 +38,10 @@ export function ItemCard() {
               radius="full"
               isIconButton
               onClick={() =>
-                dispatch({
+                onAmount({
                   action: MenuActionsType.REMOVE_FROM_CART,
-                  payload: {
-                    categoryId: category.categoryId,
-                    itemId: category.id,
-                  },
+                  categoryId: category.categoryId,
+                  itemId: category.id,
                 })
               }
             >
@@ -77,24 +52,16 @@ export function ItemCard() {
       </ProductCard>
       {!!selectedCategories.length && (
         <Card>
-          <Typography variant="h2" textAlign="right">
+          <Typography variant="h2" align="right">
             Total: {totalPrice}
           </Typography>
-          <Button
-            variant="error"
-            onClick={() =>
-              dispatch({
-                action: MenuActionsType.CLEAR_CART,
-                payload: {
-                  itemId: null,
-                },
-              })
-            }
-          >
+          <Button variant="error" onClick={onClear}>
             Limpar
           </Button>
           <Button>
-            <WhatsAppIcon /> Me manda no zap
+            <Link href={href} className={link()}>
+              <WhatsAppIcon /> Me manda no zap
+            </Link>
           </Button>
         </Card>
       )}
