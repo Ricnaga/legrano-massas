@@ -16,7 +16,7 @@ export type UseDrawerProps = {
 };
 
 export const useDrawer = (props: UseDrawerProps) => {
-  const { isOpen, children, side = DrawerSide.right, onClose } = props;
+  const { isOpen, children, side = DrawerSide.left, onClose } = props;
 
   const { Element: DrawerElement, getProps: getDrawerProps } = useElement({
     element: 'div',

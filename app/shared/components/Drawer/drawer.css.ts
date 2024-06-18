@@ -8,13 +8,14 @@ import {
   slideOutFromTop,
 } from '@/app/application/theme/animations.css';
 import { globalVars } from '@/app/application/theme/index.css';
+import { breakpoints } from '@/app/application/theme/theme.css';
 import { recipe } from '@vanilla-extract/recipes';
 
 export const drawer = recipe({
   base: {
     position: 'fixed',
 
-    zIndex: 50,
+    zIndex: 999,
 
     boxShadow:
       '0 10px 16px -4px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
@@ -22,18 +23,18 @@ export const drawer = recipe({
     transition: 'all 0.3s ease-in-out',
 
     background: globalVars.color.white200,
+    width: '100%',
+    height: '100%',
 
     padding: '1rem',
   },
   variants: {
     side: {
       right: {
-        height: '100vh',
-        width: '35%',
-
         inset: 0,
         left: 'auto',
         right: 0,
+
         animationDuration: '0.4s',
 
         selectors: {
@@ -45,11 +46,18 @@ export const drawer = recipe({
             transform: 'translateX(100%)',
           },
         },
+
+        '@media': {
+          [breakpoints.md]: {
+            width: '60%',
+          },
+
+          [breakpoints.lg]: {
+            width: '40%',
+          },
+        },
       },
       left: {
-        height: '100vh',
-        width: '75%',
-
         inset: 0,
         right: 'auto',
         left: 0,
@@ -65,6 +73,16 @@ export const drawer = recipe({
 
             animation: slideOutFromLeft,
             animationDuration: '0.4s',
+          },
+        },
+
+        '@media': {
+          [breakpoints.md]: {
+            width: '60%',
+          },
+
+          [breakpoints.lg]: {
+            width: '40%',
           },
         },
       },
@@ -86,6 +104,12 @@ export const drawer = recipe({
             animationDuration: '0.4s',
           },
         },
+
+        '@media': {
+          [breakpoints.lg]: {
+            height: '40%',
+          },
+        },
       },
       bottom: {
         inset: 0,
@@ -103,6 +127,12 @@ export const drawer = recipe({
 
             animation: slideOutFromBottom,
             animationDuration: '0.4s',
+          },
+        },
+
+        '@media': {
+          [breakpoints.lg]: {
+            height: '40%',
           },
         },
       },
