@@ -1,46 +1,69 @@
 import { globalVars } from '@/app/application/theme/index.css';
+import { breakpoints } from '@/app/application/theme/theme.css';
 import { style } from '@vanilla-extract/css';
-import { recipe } from '@vanilla-extract/recipes';
+import { RecipeVariants, recipe } from '@vanilla-extract/recipes';
 
 export const containerStyles = recipe({
   base: [
     {
       width: '100%',
+
       display: 'grid',
-      gap: '1rem',
-
-      gridTemplateColumns: 'repeat(3, 1fr)',
-
+      gridTemplateColumns: '1fr',
+      rowGap: '1rem',
       justifyItems: 'center',
     },
   ],
   variants: {
     orientation: {
       vertical: {},
+      horizontal: {
+        '@media': {
+          [breakpoints.lg]: {
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1rem',
+          },
+        },
+      },
     },
   },
+  defaultVariants: {
+    orientation: 'horizontal',
+  },
 });
+
+type ContainerVariants = RecipeVariants<typeof containerStyles>;
 
 export const listStyles = recipe({
   base: [
     {
-      display: 'grid',
-      height: 'min-content',
-
-      gap: '1rem',
-
       width: '100%',
-      maxWidth: '30rem',
 
       textAlign: 'center',
+
+      display: 'flex',
     },
   ],
   variants: {
     orientation: {
       vertical: {},
+      horizontal: {
+        '@media': {
+          [breakpoints.lg]: {
+            display: 'grid',
+            height: 'min-content',
+            maxWidth: '30rem',
+          },
+        },
+      },
     },
   },
+  defaultVariants: {
+    orientation: 'horizontal',
+  },
 });
+
+type ListVariants = RecipeVariants<typeof listStyles>;
 
 export const triggerStyles = recipe({
   base: [
@@ -73,14 +96,20 @@ export const triggerStyles = recipe({
           globalVars.color.green100,
         ),
 
-        borderRadius: '32px',
+        borderRadius: '4px',
 
-        selectors: {
-          '&:hover': {
-            filter: 'brightness(105%)',
-          },
-          '&:active': {
-            filter: 'brightness(110%)',
+        '@media': {
+          [breakpoints.lg]: {
+            borderRadius: '28px',
+
+            selectors: {
+              '&:hover': {
+                filter: 'brightness(105%)',
+              },
+              '&:active': {
+                filter: 'brightness(110%)',
+              },
+            },
           },
         },
       },
@@ -101,3 +130,5 @@ export const contentStyles = style({
   gridColumn: 'span 2',
   width: '100%',
 });
+
+export type DrawerVariants = Extract<ContainerVariants, ListVariants>;

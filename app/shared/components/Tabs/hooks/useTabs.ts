@@ -5,7 +5,7 @@ import {
   useCallback,
   useState,
 } from 'react';
-import { triggerStyles } from '../tabs.css';
+import { DrawerVariants, triggerStyles } from '../tabs.css';
 import { useMenuContext } from '@/app/contexts/menu';
 
 export type TabContentData<T extends string> = { id: T; label: ReactNode };
@@ -14,14 +14,15 @@ export type TabKeys<T extends string = string> = Array<
   PropsWithChildren<TabContentData<T>>
 >;
 
-export interface UseTabsProps<T extends string = string> {
+export type UseTabsProps<T extends string = string> = DrawerVariants & {
   data: TabKeys<T>;
   defaultValue?: T;
-}
+};
 
 export const useTabs = <T extends string = string>({
   data,
   defaultValue,
+  orientation = 'horizontal',
 }: UseTabsProps<T>) => {
   const { setCategoryId } = useMenuContext();
   const [trigger, setTrigger] = useState<string | null>(
@@ -45,5 +46,6 @@ export const useTabs = <T extends string = string>({
     trigger,
     triggerProps,
     data,
+    orientation,
   };
 };
