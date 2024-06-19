@@ -2,10 +2,13 @@
 
 import { MenuActionsType } from '@/app/contexts/menu/hooks/useMenuProvider';
 import { WhatsAppIcon } from '@/app/shared/icons';
-import { Button, Card, ProductCard, Typography } from '@/components';
+import Link from 'next/link';
+import { Button } from '../../../Button/Button';
+import { Card } from '../../../Card/Card';
+import { ProductCard } from '../../../ProductCard/ProductCard';
+import { Typography } from '../../../Typography/Typography';
 import { useItemCard } from './hooks/useItemCard';
 import { amountContainer, container, link } from './itemcard.css';
-import Link from 'next/link';
 
 export function ItemCard() {
   const { selectedCategories, totalPrice, onClear, onAmount, href } =

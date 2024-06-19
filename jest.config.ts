@@ -11,10 +11,14 @@ const createJestConfig = nextJest({
 const config: Config = {
   clearMocks: true,
   collectCoverageFrom: [
+    '<rootDir>/app/(screen)/layout.[jt]sx',
     '<rootDir>/app/(screen)/**/*.[jt]s?(x)',
     '!<rootDir>/app/(screen)/**/*.css.[jt]s',
+    '<rootDir>/app/shared/components/index.[jt]s?(x)',
     '<rootDir>/app/shared/components/**/*.[jt]s?(x)',
     '!<rootDir>/app/shared/components/**/*.css.[jt]s',
+    '<rootDir>/app/shared/components/**/_components/**/*.[jt]s?(x)',
+    '!<rootDir>/app/shared/components/**/_components/**/*.css.[jt]s',
   ],
   collectCoverage: true,
   coverageDirectory: '.coverage',
@@ -25,7 +29,7 @@ const config: Config = {
   }),
   preset: 'ts-jest',
   roots: ['<rootDir>/app'],
-  setupFilesAfterEnv: ['<rootDir>/app/application/test/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/app/application/test/jest.setup.ts'],
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/'],
   transform: {

@@ -1,6 +1,6 @@
-import { Typography } from '@/app/shared/components';
 import Image from 'next/image';
 import { useHome } from './hooks/useHome';
+import { Typography } from '@/app/shared/components';
 
 export default function Home() {
   const {

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from '../../icons';
-import { linkStyles, containerStyles } from './contacts.css';
+import { containerStyles, linkStyles } from './contacts.css';
 
 export const contactItems = [
   {
