@@ -7,6 +7,7 @@ import {
   useState,
 } from 'react';
 import { categories } from '../data';
+import { STORAGE_KEY } from '@/app/application/data/environment';
 
 export type MenuItems = {
   id: string;
@@ -40,8 +41,6 @@ type MenuActions = {
     itemId: string | null;
   };
 };
-
-const STORAGE_KEY = String(process.env.NEXT_PUBLIC_STORAGE_KEY);
 
 const saveCartItems = (selectedCartItems: Array<MenuReducerType>) =>
   localStorage.setItem(STORAGE_KEY, JSON.stringify(selectedCartItems));
