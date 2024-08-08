@@ -5,7 +5,7 @@ import { recipe } from '@vanilla-extract/recipes';
 export const container = recipe({
   base: [
     {
-      position: 'absolute',
+      position: 'fixed',
       bottom: 0,
 
       width: '100%',
