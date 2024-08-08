@@ -5,165 +5,243 @@ import {
   slideInFromTop,
   slideOutFromBottom,
   slideOutFromLeft,
+  slideOutFromRight,
   slideOutFromTop,
 } from '@/app/application/theme/animations.css';
 import { globalVars } from '@/app/application/theme/index.css';
 import { breakpoints } from '@/app/application/theme/theme.css';
 import { recipe } from '@vanilla-extract/recipes';
 
-export const drawer = recipe({
+const animation = recipe({
   base: {
-    position: 'fixed',
-
-    zIndex: 999,
-
-    boxShadow:
-      '0 10px 16px -4px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-
-    transition: 'all 0.3s ease-in-out',
-
-    background: globalVars.color.white200,
-    width: '100%',
-    height: '100%',
-
-    padding: '1rem',
+    transition: 'all 300ms ease',
   },
+});
+
+export const backdropStyles = recipe({
+  base: [
+    animation(),
+    {
+      position: 'fixed',
+    },
+  ],
   variants: {
+    isOpen: {
+      true: {
+        backdropFilter: 'blur(5px)',
+
+        zIndex: 50,
+
+        width: '100%',
+        height: '100%',
+
+        background: 'rgba(0, 0, 0, .5)',
+      },
+    },
+  },
+  defaultVariants: {
+    isOpen: false,
+  },
+});
+
+export const drawerStyles = recipe({
+  base: [
+    animation(),
+    {
+      position: 'fixed',
+
+      animationDuration: '0.4s',
+
+      zIndex: 60,
+
+      boxShadow:
+        '0 10px 16px -4px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+
+      background: globalVars.color.white200,
+    },
+  ],
+  variants: {
+    isOpen: {
+      true: {},
+      false: {},
+    },
     side: {
-      right: {
-        inset: 0,
-        left: 'auto',
-        right: 0,
+      left: {
+        inset: '0 auto 0 0',
 
-        animationDuration: '0.4s',
+        width: '100%',
 
-        selectors: {
-          '&[data-opened=true]': {
-            animation: slideInFromRight,
-          },
-
-          '&[data-opened=false]': {
-            transform: 'translateX(100%)',
-          },
-        },
+        height: '100vh',
 
         '@media': {
           [breakpoints.md]: {
-            width: '60%',
+            width: '40vw',
           },
 
           [breakpoints.lg]: {
-            width: '40%',
+            width: '40vw',
           },
         },
       },
-      left: {
-        inset: 0,
-        right: 'auto',
-        left: 0,
+      right: {
+        inset: '0 0 0 auto',
 
-        selectors: {
-          '&[data-opened=true]': {
-            animation: slideInFromLeft,
-            animationDuration: '0.4s',
-          },
+        width: '100%',
 
-          '&[data-opened=false]': {
-            transform: 'translateX(-100%)',
-
-            animation: slideOutFromLeft,
-            animationDuration: '0.4s',
-          },
-        },
+        height: '100vh',
 
         '@media': {
           [breakpoints.md]: {
-            width: '60%',
+            width: '40vw',
           },
 
           [breakpoints.lg]: {
-            width: '40%',
+            width: '40vw',
           },
         },
       },
       top: {
-        inset: 0,
-        top: 0,
-        bottom: 'auto',
+        inset: '0 0 auto',
 
-        selectors: {
-          '&[data-opened=true]': {
-            animation: slideInFromTop,
-            animationDuration: '0.4s',
-          },
+        width: '100%',
 
-          '&[data-opened=false]': {
-            transform: 'translateY(-100%)',
-
-            animation: slideOutFromTop,
-            animationDuration: '0.4s',
-          },
-        },
+        height: '100%',
 
         '@media': {
+          [breakpoints.md]: {
+            height: '40vh',
+          },
+
           [breakpoints.lg]: {
-            height: '40%',
+            height: '40vh',
           },
         },
       },
       bottom: {
-        inset: 0,
-        bottom: 0,
-        top: 'auto',
+        inset: 'auto 0 0',
+        width: '100%',
 
-        selectors: {
-          '&[data-opened=true]': {
-            animation: slideInFromBottom,
-            animationDuration: '0.4s',
-          },
-
-          '&[data-opened=false]': {
-            transform: 'translateY(100%)',
-
-            animation: slideOutFromBottom,
-            animationDuration: '0.4s',
-          },
-        },
+        height: '100%',
 
         '@media': {
+          [breakpoints.md]: {
+            height: '40vh',
+          },
+
           [breakpoints.lg]: {
-            height: '40%',
+            height: '40vh',
           },
         },
       },
     },
   },
+  compoundVariants: [
+    {
+      variants: {
+        isOpen: false,
+        side: 'left',
+      },
+      style: {
+        transform: 'translateX(-100%)',
+        animation: slideOutFromLeft,
+      },
+    },
+    {
+      variants: {
+        isOpen: true,
+        side: 'left',
+      },
+      style: {
+        animation: slideInFromLeft,
+      },
+    },
+    {
+      variants: {
+        isOpen: false,
+        side: 'right',
+      },
+      style: {
+        transform: 'translateX(100%)',
+        animation: slideOutFromRight,
+      },
+    },
+    {
+      variants: {
+        isOpen: true,
+        side: 'right',
+      },
+      style: {
+        animation: slideInFromRight,
+      },
+    },
+    {
+      variants: {
+        isOpen: false,
+        side: 'top',
+      },
+      style: {
+        transform: 'translateY(-100%)',
+        animation: slideOutFromTop,
+      },
+    },
+    {
+      variants: {
+        isOpen: true,
+        side: 'top',
+      },
+      style: {
+        animation: slideInFromTop,
+      },
+    },
+    {
+      variants: {
+        isOpen: false,
+        side: 'bottom',
+      },
+      style: {
+        transform: 'translateY(100%)',
+        animation: slideOutFromBottom,
+      },
+    },
+    {
+      variants: {
+        isOpen: true,
+        side: 'bottom',
+      },
+      style: {
+        animation: slideOutFromTop,
+      },
+    },
+  ],
 });
 
-export const content = recipe({
-  base: {
-    margin: '2rem 1rem 1rem',
-  },
+export const closeButtonStyles = recipe({
+  base: [
+    animation(),
+    {
+      position: 'absolute',
+      inset: '.8rem .8rem auto auto',
+
+      border: 'none',
+      borderRadius: '100%',
+
+      padding: '.6rem',
+
+      cursor: 'pointer',
+
+      ':hover': {
+        filter: 'brightness(90%)',
+      },
+
+      ':active': {
+        filter: 'brightness(96%)',
+      },
+    },
+  ],
 });
 
-export const closeButton = recipe({
+export const contentStyles = recipe({
   base: {
-    border: 'none',
-    borderRadius: '100%',
-
-    padding: '.6rem',
-
-    cursor: 'pointer',
-
-    transition: 'all',
-    transitionDuration: '0.2s',
-
-    ':hover': {
-      filter: 'brightness(90%)',
-    },
-
-    ':active': {
-      filter: 'brightness(96%)',
-    },
+    margin: '5rem 1rem 1rem',
   },
 });

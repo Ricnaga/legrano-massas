@@ -8,22 +8,25 @@ interface DrawerProps extends UseDrawerProps {}
 
 export function Drawer(props: DrawerProps) {
   const {
-    isOpen,
-    DrawerElement,
+    Backdrop,
+    getBackdropProps,
+    Drawer,
     getDrawerProps,
-    ButtonElement,
-    getButtonProps,
-    ContentElement,
+    CloseButton,
+    getCloseButtonProps,
+    Content,
     getContentProps,
   } = useDrawer(props);
 
   return createPortal(
-    <DrawerElement data-opened={isOpen} {...getDrawerProps()}>
-      <ButtonElement {...getButtonProps()}>
-        <CloseIcon />
-      </ButtonElement>
-      <ContentElement {...getContentProps()} />
-    </DrawerElement>,
+    <Backdrop {...getBackdropProps()}>
+      <Drawer {...getDrawerProps()}>
+        <CloseButton {...getCloseButtonProps()}>
+          <CloseIcon />
+        </CloseButton>
+        <Content {...getContentProps()} />
+      </Drawer>
+    </Backdrop>,
     document.body,
   );
 }

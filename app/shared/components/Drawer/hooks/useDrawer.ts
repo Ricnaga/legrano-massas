@@ -1,5 +1,10 @@
 import { useElement } from '@/app/shared/hooks/useElement';
-import { closeButton, content, drawer } from '../drawer.css';
+import {
+  backdropStyles,
+  drawerStyles,
+  closeButtonStyles,
+  contentStyles,
+} from '../drawer.css';
 
 export enum DrawerSide {
   left = 'left',
@@ -16,30 +21,36 @@ export type UseDrawerProps = {
 };
 
 export const useDrawer = (props: UseDrawerProps) => {
-  const { isOpen, children, side = DrawerSide.left, onClose } = props;
+  const { isOpen = false, children, side = DrawerSide.left, onClose } = props;
 
-  const { Element: DrawerElement, getProps: getDrawerProps } = useElement({
+  const { Element: Backdrop, getProps: getBackdropProps } = useElement({
     element: 'div',
-    props: { className: drawer({ side }) },
+    props: { className: backdropStyles({ isOpen }) },
   });
 
-  const { Element: ButtonElement, getProps: getButtonProps } = useElement({
+  const { Element: Drawer, getProps: getDrawerProps } = useElement({
+    element: 'div',
+    props: { className: drawerStyles({ isOpen, side }) },
+  });
+
+  const { Element: CloseButton, getProps: getCloseButtonProps } = useElement({
     element: 'button',
-    props: { onClick: () => onClose(), className: closeButton() },
+    props: { onClick: () => onClose(), className: closeButtonStyles() },
   });
 
-  const { Element: ContentElement, getProps: getContentProps } = useElement({
+  const { Element: Content, getProps: getContentProps } = useElement({
     element: 'div',
-    props: { className: content(), children },
+    props: { className: contentStyles(), children },
   });
 
   return {
-    isOpen,
-    DrawerElement,
+    Backdrop,
+    getBackdropProps,
+    Drawer,
     getDrawerProps,
-    ButtonElement,
-    getButtonProps,
-    ContentElement,
+    CloseButton,
+    getCloseButtonProps,
+    Content,
     getContentProps,
   };
 };
