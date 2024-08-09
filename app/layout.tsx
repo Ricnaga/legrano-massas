@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { Karla } from 'next/font/google';
 import './application/theme/global.css';
 import { ComposeProviders } from './contexts/compose';
-import { BottomBar, Contacts, Container } from './shared/components';
+import { Container } from './shared/components';
+import { Contacts, BottomBar } from './shared/components/@legrano';
 
 const karla = Karla({ subsets: ['latin'] });
 

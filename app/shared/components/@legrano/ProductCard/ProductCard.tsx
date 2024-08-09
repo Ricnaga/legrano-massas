@@ -1,5 +1,5 @@
-import { Card } from '../Card/Card';
-import { Typography } from '../Typography/Typography';
+import { Card } from '../../Card/Card';
+import { Typography } from '../../Typography/Typography';
 import { UseProductCardProps, useProductCard } from './hooks/useProductCard';
 import { card, description, title } from './productcard.css';
 

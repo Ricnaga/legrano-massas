@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
-import { Drawer } from '..';
-import { CartIcon } from '../../icons';
+import { Drawer } from '../..';
+import { CartIcon } from '../../../icons';
 import { ItemCard } from './_components/ItemCard/ItemCard';
 import { container, linkStyles } from './bottomBar.css';
 

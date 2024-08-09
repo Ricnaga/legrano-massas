@@ -1,12 +1,12 @@
 'use client';
 
 import { MenuActionsType } from '@/app/contexts/menu/hooks/useMenuProvider';
+import { Button } from '@/app/shared/components/Button/Button';
+import { Card } from '@/app/shared/components/Card/Card';
+import { Typography } from '@/app/shared/components/Typography/Typography';
 import { WhatsAppIcon } from '@/app/shared/icons';
 import Link from 'next/link';
-import { Button } from '../../../Button/Button';
-import { Card } from '../../../Card/Card';
 import { ProductCard } from '../../../ProductCard/ProductCard';
-import { Typography } from '../../../Typography/Typography';
 import { useItemCard } from './hooks/useItemCard';
 import { amountContainer, container, link } from './itemcard.css';
 

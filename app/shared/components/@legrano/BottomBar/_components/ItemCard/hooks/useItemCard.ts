@@ -1,7 +1,7 @@
 import { useMenuContext } from '@/app/contexts/menu';
 import { MenuActionsType } from '@/app/contexts/menu/hooks/useMenuProvider';
-import { contactItems } from '@/app/shared/components/Contacts/Contacts';
 import { convertToBRL } from '@/app/shared/utils/currency';
+import { contactItems } from '../../../..';
 
 type OnAmountParams = {
   action: keyof typeof MenuActionsType;
