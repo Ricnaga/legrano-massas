@@ -23,6 +23,7 @@ export const backdropStyles = recipe({
     animation(),
     {
       position: 'fixed',
+      inset: 0,
     },
   ],
   variants: {
