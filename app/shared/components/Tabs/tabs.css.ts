@@ -131,4 +131,4 @@ export const contentStyles = style({
   width: '100%',
 });
 
-export type DrawerVariants = Extract<ContainerVariants, ListVariants>;
+export type TabsVariants = Extract<ContainerVariants, ListVariants>;

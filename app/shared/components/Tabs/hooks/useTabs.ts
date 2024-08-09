@@ -5,7 +5,7 @@ import {
   useCallback,
   useState,
 } from 'react';
-import { DrawerVariants, triggerStyles } from '../tabs.css';
+import { TabsVariants, triggerStyles } from '../tabs.css';
 import { useMenuContext } from '@/app/contexts/menu';
 
 export type TabContentData<T extends string> = { id: T; label: ReactNode };
@@ -14,7 +14,7 @@ export type TabKeys<T extends string = string> = Array<
   PropsWithChildren<TabContentData<T>>
 >;
 
-export type UseTabsProps<T extends string = string> = DrawerVariants & {
+export type UseTabsProps<T extends string = string> = TabsVariants & {
   data: TabKeys<T>;
   defaultValue?: T;
 };
