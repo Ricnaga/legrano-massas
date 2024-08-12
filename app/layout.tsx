@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description: ' | Massas artesanais',
 };
 
-export default function RootLayout({
-  children,
-}: {
+type RootLayoutProps = {
   children: React.ReactNode;
-}) {
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-br">
       <body className={karla.className}>
