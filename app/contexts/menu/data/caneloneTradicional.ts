@@ -1,11 +1,11 @@
 import { MenuReducerType } from '../hooks/useMenuProvider';
 
 export const caneloneTradicional: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'CaneloneTradicional',
   category: 'Canelone Tradicional',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'CaneloneTradicionalPresuntoMucarela',
       name: 'Presunto e muçarela',
       price: 48,
       weight: '1kg',
@@ -13,7 +13,7 @@ export const caneloneTradicional: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'CaneloneTradicionalTomateSecoEMucarela',
       name: 'Tomate seco e muçarela',
       price: 48,
       weight: '1kg',
@@ -21,7 +21,7 @@ export const caneloneTradicional: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'CaneloneTradicionalMucarelaParmesao',
       name: 'Muçarela e parmesão',
       price: 48,
       weight: '1kg',
@@ -29,7 +29,7 @@ export const caneloneTradicional: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'CaneloneTradicionalEspinafreComRicota',
       name: 'Espinafre com ricota',
       price: 48,
       weight: '1kg',
@@ -40,11 +40,11 @@ export const caneloneTradicional: MenuReducerType = {
 };
 
 export const caneloneEspinafre: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'CaneloneSpinafre',
   category: 'Canelone de espinafre',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'CaneloneSpinafreMucarelaParmesao',
       name: 'Muçarela e parmesão',
       price: 48,
       weight: '1kg',

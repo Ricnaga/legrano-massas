@@ -1,11 +1,11 @@
 import { MenuReducerType } from '../hooks/useMenuProvider';
 
 export const massaLasanha: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'MassaLasanhaPreCozida',
   category: 'Massa lasanha pré-cozida',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'MassaLasanhaPreCozidaTradicional',
       name: 'Tradicional',
       price: 36,
       weight: '1kg',
@@ -13,7 +13,7 @@ export const massaLasanha: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'MassaLasanhaPreCozidaEspinafre',
       name: 'Espinafre',
       price: 36,
       weight: '1kg',

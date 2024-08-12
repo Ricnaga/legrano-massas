@@ -1,11 +1,11 @@
 import { MenuReducerType } from '../hooks/useMenuProvider';
 
 export const nhoque: MenuReducerType = {
-  id: (1).toString(),
+  id: 'Nhoque',
   category: 'Nhoque',
   items: [
     {
-      id: (1.1).toString(),
+      id: 'NhoqueBatata',
       name: 'Batata',
       price: 36,
       weight: '1kg',
@@ -13,7 +13,7 @@ export const nhoque: MenuReducerType = {
       selected: false,
     },
     {
-      id: (1.2).toString(),
+      id: 'NhoqueBatataDoce',
       name: 'Batata doce',
       price: 36,
       weight: '1kg',
@@ -21,7 +21,7 @@ export const nhoque: MenuReducerType = {
       selected: false,
     },
     {
-      id: (1.3).toString(),
+      id: 'NhoqueMandioca',
       name: 'Mandioca',
       price: 36,
       weight: '1kg',
@@ -29,7 +29,7 @@ export const nhoque: MenuReducerType = {
       selected: false,
     },
     {
-      id: (1.4).toString(),
+      id: 'NhoqueMandioquinha',
       name: 'Mandioquinha',
       price: 36,
       weight: '1kg',
@@ -37,7 +37,7 @@ export const nhoque: MenuReducerType = {
       selected: false,
     },
     {
-      id: (1.5).toString(),
+      id: 'NhoqueEspinafre',
       name: 'Espinafre',
       price: 36,
       weight: '1kg',
@@ -48,11 +48,11 @@ export const nhoque: MenuReducerType = {
 };
 
 export const nhoqueRecheado: MenuReducerType = {
-  id: (2).toString(),
+  id: 'NhoqueRecheado',
   category: 'Nhoque Recheado',
   items: [
     {
-      id: (2.1).toString(),
+      id: 'NhoqueRecheadoBatataRecheadaDeMucarela',
       name: 'Batata recheada de muçarela',
       price: 48,
       weight: '1kg',
@@ -60,7 +60,7 @@ export const nhoqueRecheado: MenuReducerType = {
       selected: false,
     },
     {
-      id: (2.2).toString(),
+      id: 'NhoqueRecheadoBatataRecheadaDeMucarelaEPresunto',
       name: 'Batata recheada de muçarela e presunto',
       price: 48,
       weight: '1kg',
@@ -68,7 +68,7 @@ export const nhoqueRecheado: MenuReducerType = {
       selected: false,
     },
     {
-      id: (2.3).toString(),
+      id: 'NhoqueRecheadoMandiocaRecheadaDeCarneSecaQueijo',
       name: 'Mandioca recheada de carne seca/queijo',
       price: 48,
       weight: '1kg',
@@ -76,7 +76,7 @@ export const nhoqueRecheado: MenuReducerType = {
       selected: false,
     },
     {
-      id: (2.4).toString(),
+      id: 'NhoqueRecheadoMandioquinhaRecheadaDeQueijo',
       name: 'Mandioquinha recheada de queijo',
       price: 48,
       weight: '1kg',

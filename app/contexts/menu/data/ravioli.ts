@@ -1,11 +1,11 @@
 import { MenuReducerType } from '../hooks/useMenuProvider';
 
 export const ravioli: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'RavioliMassaTradicional',
   category: 'Ravioli Massa tradicional',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'RavioliMassaTradicionalAboboraComParmesao',
       name: 'Abóbora com parmesão',
       price: 48,
       weight: '1kg',
@@ -13,7 +13,7 @@ export const ravioli: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'RavioliMassaTradicionalPresuntoEQueijo',
       name: 'presunto e queijo',
       price: 48,
       weight: '1kg',
@@ -21,7 +21,7 @@ export const ravioli: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'RavioliMassaTradicionalTomateSecoComQueijo',
       name: 'Tomate seco com queijo',
       price: 48,
       weight: '1kg',
@@ -29,7 +29,7 @@ export const ravioli: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'RavioliMassaTradicionalQueijo',
       name: 'Queijo',
       price: 48,
       weight: '1kg',
@@ -40,11 +40,11 @@ export const ravioli: MenuReducerType = {
 };
 
 export const ravioliEspinafre: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'RavioliMassaDeEspinafre',
   category: 'Ravioli Massa de espinafre',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'RavioliMassaDeEspinafreDoisQueijos',
       name: 'Dois queijos',
       price: 48,
       weight: '1kg',

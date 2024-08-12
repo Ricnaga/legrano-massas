@@ -1,11 +1,11 @@
 import { MenuReducerType } from '../hooks/useMenuProvider';
 
 export const rondele: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'RondeleMassaTradicional',
   category: 'Rondele Massa tradicional',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'RondeleMassaTradicionalPresuntoEQueijo',
       name: 'Presunto e queijo',
       price: 48,
       weight: '1kg',
@@ -13,7 +13,7 @@ export const rondele: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'RondeleMassaTradicional2Queijos',
       name: '2 queijos',
       price: 48,
       weight: '1kg',
@@ -21,7 +21,7 @@ export const rondele: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'RondeleMassaTradicionalTomateSecoQueijo',
       name: 'Tomate seco c/ queijo',
       price: 48,
       weight: '1kg',
@@ -29,7 +29,7 @@ export const rondele: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'RondeleMassaTradicionalEspinafreComRicota',
       name: 'Espinafre com ricota',
       price: 48,
       weight: '1kg',
@@ -40,11 +40,11 @@ export const rondele: MenuReducerType = {
 };
 
 export const rondeleEspinafre: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'RondeleMassaDeEspinafre',
   category: 'Rondele Massa de espinafre',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'RondeleMassaDeEspinafreDoisQueijos',
       name: 'Dois queijos',
       price: 48,
       weight: '1kg',

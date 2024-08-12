@@ -1,11 +1,11 @@
 import { MenuReducerType } from '../hooks/useMenuProvider';
 
 export const talharim: MenuReducerType = {
-  id: Math.random().toString(),
+  id: 'Talharim',
   category: 'Talharim',
   items: [
     {
-      id: Math.random().toString(),
+      id: 'TalharimTradicional',
       name: 'Tradicional',
       price: 36,
       weight: '1kg',
@@ -13,7 +13,7 @@ export const talharim: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'TalharimBeterraba',
       name: 'Beterraba',
       price: 36,
       weight: '1kg',
@@ -21,7 +21,7 @@ export const talharim: MenuReducerType = {
       selected: false,
     },
     {
-      id: Math.random().toString(),
+      id: 'TalharimEspinafre',
       name: 'Espinafre',
       price: 36,
       weight: '1kg',
