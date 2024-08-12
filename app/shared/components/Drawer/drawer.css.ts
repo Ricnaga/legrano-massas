@@ -23,12 +23,12 @@ export const backdropStyles = recipe({
     animation(),
     {
       position: 'fixed',
-      inset: 0,
     },
   ],
   variants: {
     isOpen: {
       true: {
+        inset: 0,
         backdropFilter: 'blur(5px)',
 
         zIndex: 50,
