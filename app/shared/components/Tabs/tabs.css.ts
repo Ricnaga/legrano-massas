@@ -1,4 +1,5 @@
 import { globalVars } from '@/app/application/theme/index.css';
+import { breakpoints } from '@/app/application/theme/theme.css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 
 export const container = recipe({
@@ -10,16 +11,22 @@ export const container = recipe({
     padding: '2rem',
 
     display: 'grid',
+    gridTemplateColumns: '1fr',
+    rowGap: '1rem',
   },
   variants: {
     orientation: {
-      vertical: {
-        gridTemplateColumns: '1fr',
-        rowGap: '1rem',
-      },
+      vertical: {},
       horizontal: {
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        columnGap: '1rem',
+        '@media': {
+          [breakpoints.lg]: {
+            height: '100%',
+            maxHeight: '540px',
+
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            columnGap: '1rem',
+          },
+        },
       },
     },
   },
@@ -38,16 +45,21 @@ export const tablist = recipe({
     gap: '0.2rem',
 
     scrollbarWidth: 'none',
+
+    overflowX: 'auto',
+    gridColumn: 'span 1',
   },
   variants: {
     orientation: {
-      vertical: {
-        overflowX: 'auto',
-        gridColumn: 'span 1',
-      },
+      vertical: {},
       horizontal: {
-        textAlign: 'center',
-        flexDirection: 'column',
+        '@media': {
+          [breakpoints.lg]: {
+            overflowY: 'auto',
+            textAlign: 'center',
+            flexDirection: 'column',
+          },
+        },
       },
     },
   },
@@ -107,7 +119,11 @@ export const tabpanels = recipe({
     orientation: {
       vertical: {},
       horizontal: {
-        gridColumn: 'span 2',
+        '@media': {
+          [breakpoints.lg]: {
+            gridColumn: 'span 2',
+          },
+        },
       },
     },
   },

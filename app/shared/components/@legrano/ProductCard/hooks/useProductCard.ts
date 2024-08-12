@@ -9,7 +9,7 @@ export type UseProductCardProps<T = MenuItems> = DescriptionVariants & {
 };
 
 export const useProductCard = (props: UseProductCardProps) => {
-  const { children, categories, itemsToScroll = 6, variant = 'Menu' } = props;
+  const { children, categories, itemsToScroll = 4, variant = 'Menu' } = props;
 
   return {
     children,

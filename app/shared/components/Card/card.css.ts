@@ -22,7 +22,7 @@ export const container = recipe({
     hasScroll: {
       true: {
         maxHeight: '480px',
-        overflowY: 'scroll',
+        overflowY: 'auto',
 
         '::-webkit-scrollbar': {
           width: '10px',
