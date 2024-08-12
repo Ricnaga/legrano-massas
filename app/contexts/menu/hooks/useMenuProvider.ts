@@ -126,21 +126,16 @@ const initialState = getCartItems() || categories;
 export type MenuContextProps = {
   state: MenuState;
   dispatch: Dispatch<MenuActions>;
-  setCategoryId: Dispatch<SetStateAction<string>>;
-  categoryId: string;
 };
 
 export const useMenuProvider = (baseProps: PropsWithChildren) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [categoryId, setCategoryId] = useState<string>(initialState[0].id);
 
   const providerProps: ProviderProps<MenuContextProps> = {
     ...baseProps,
     value: {
       state,
       dispatch,
-      setCategoryId,
-      categoryId,
     },
   };
 

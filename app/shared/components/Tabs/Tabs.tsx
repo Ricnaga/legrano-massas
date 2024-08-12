@@ -9,27 +9,18 @@ import {
   tabpanels,
   TabsVariant,
 } from './tabs.css';
+import { useTabs, UseTabsProps } from './hooks/useTabs';
 
 export type TabData = PropsWithChildren<{
   id: string;
   label: ReactNode;
 }>;
 
-type TabsProps<D = TabData> = TabsVariant & {
-  items: Array<D>;
-  children?: (data: D) => ReactNode;
-};
+type TabsProps = UseTabsProps;
 
-export function Tabs({ items, orientation = 'vertical', children }: TabsProps) {
-  const [trigger, setTrigger] = useState<string>(items.at(0)?.id || '');
-
-  const filteredTabContent = items.find(
-    (item) => item.id === trigger,
-  ) as TabData;
-
-  const tabpanelContent = children
-    ? children(filteredTabContent)
-    : filteredTabContent.children;
+export function Tabs(props: TabsProps) {
+  const { tabpanelContent, orientation, items, trigger, setTrigger } =
+    useTabs(props);
 
   return (
     <div className={container({ orientation })}>
