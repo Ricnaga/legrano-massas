@@ -2,21 +2,26 @@
 
 import { useMenuContext } from '@/app/contexts/menu';
 import { MenuActionsType } from '@/app/contexts/menu/hooks/useMenuProvider';
-import { Button, ProductCard } from '@/app/shared/components';
+import { Button } from '@/app/shared/components';
+import { ProductCard } from '@/app/shared/components/@legrano';
 import { AddCartIcon } from '@/app/shared/icons';
 import { convertToBRL } from '@/app/shared/utils/currency';
 import { cartIcon } from './menucard.css';
 
-export function MenuCard() {
-  const { state, dispatch, categoryId } = useMenuContext();
+type MenuCardProps = {
+  id: string;
+};
+
+export function MenuCard({ id }: MenuCardProps) {
+  const { state, dispatch } = useMenuContext();
 
   const filteredCategories =
     state
-      .filter((category) => Object.is(category.id, categoryId))
+      .filter((category) => Object.is(category.id, id))
       .at(0)
       ?.items.map((item) => ({
         ...item,
-        categoryId,
+        categoryId: id,
         price: convertToBRL(item.price),
       })) || [];
 
