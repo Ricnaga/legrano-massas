@@ -42,7 +42,6 @@ export function MenuCard({ id }: MenuCardProps) {
             })
           }
         >
-          Adicionar ao carrinho{' '}
           <AddCartIcon pathProps={{ className: cartIcon() }} />
         </Button>
       )}

@@ -16,6 +16,7 @@ export const amountContainer = recipe({
   base: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
+    columnGap: '1rem',
     alignItems: 'center',
     justifyItems: 'center',
   },
