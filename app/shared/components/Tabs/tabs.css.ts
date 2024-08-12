@@ -1,134 +1,126 @@
 import { globalVars } from '@/app/application/theme/index.css';
-import { breakpoints } from '@/app/application/theme/theme.css';
-import { style } from '@vanilla-extract/css';
-import { RecipeVariants, recipe } from '@vanilla-extract/recipes';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 
-export const containerStyles = recipe({
-  base: [
-    {
-      width: '100%',
+export const container = recipe({
+  base: {
+    background: globalVars.color.white200,
 
-      display: 'grid',
-      gridTemplateColumns: '1fr',
-      rowGap: '1rem',
-      justifyItems: 'center',
-    },
-  ],
+    borderRadius: '8px',
+
+    padding: '2rem',
+
+    display: 'grid',
+  },
   variants: {
     orientation: {
-      vertical: {},
+      vertical: {
+        gridTemplateColumns: '1fr',
+        rowGap: '1rem',
+      },
       horizontal: {
-        '@media': {
-          [breakpoints.lg]: {
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1rem',
-          },
-        },
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        columnGap: '1rem',
       },
     },
   },
   defaultVariants: {
-    orientation: 'horizontal',
+    orientation: 'vertical',
   },
 });
 
-type ContainerVariants = RecipeVariants<typeof containerStyles>;
+type TabsContainerVariant = RecipeVariants<typeof container>;
 
-export const listStyles = recipe({
-  base: [
-    {
-      width: '100%',
+export const tablist = recipe({
+  base: {
+    width: '100%',
 
-      textAlign: 'center',
+    display: 'flex',
+    gap: '0.2rem',
 
-      display: 'flex',
-    },
-  ],
+    scrollbarWidth: 'none',
+  },
   variants: {
     orientation: {
-      vertical: {},
+      vertical: {
+        overflowX: 'auto',
+        gridColumn: 'span 1',
+      },
       horizontal: {
-        '@media': {
-          [breakpoints.lg]: {
-            display: 'grid',
-            height: 'min-content',
-            maxWidth: '30rem',
-          },
-        },
+        textAlign: 'center',
+        flexDirection: 'column',
       },
     },
   },
   defaultVariants: {
-    orientation: 'horizontal',
+    orientation: 'vertical',
   },
 });
 
-type ListVariants = RecipeVariants<typeof listStyles>;
+type TabListVariant = RecipeVariants<typeof tablist>;
 
-export const triggerStyles = recipe({
-  base: [
-    {
-      padding: '1rem 2rem',
+export const tab = recipe({
+  base: {
+    transition: 'all 200ms ease',
 
-      fontSize: '1.5rem',
+    whiteSpace: 'nowrap',
 
-      cursor: 'pointer',
+    cursor: 'pointer',
 
-      textTransform: 'capitalize',
+    padding: '1rem 1.4rem',
+
+    textTransform: 'capitalize',
+
+    color: globalVars.color.green200,
+
+    textShadow: '0px 4px 8px :color'.replace(':color', globalVars.color.red100),
+
+    fontSize: '1.2rem',
+    fontWeight: 700,
+
+    borderRadius: '4px',
+
+    selectors: {
+      '&:hover': {
+        color: globalVars.color.dark100,
+        background: globalVars.color.yellow100,
+      },
+      '&:active': {
+        color: globalVars.color.green100,
+      },
     },
-  ],
+  },
   variants: {
     isActive: {
       true: {
         color: globalVars.color.yellow200,
-        textShadow: '0px 4px 8px :color'.replace(
-          ':color',
-          globalVars.color.red100,
-        ),
-        fontWeight: 700,
-
         background: globalVars.color.green200,
-
-        maxHeight: '3.75rem',
-
-        boxShadow: '0px 0px 16px 4px :color'.replace(
-          ':color',
-          globalVars.color.green100,
-        ),
-
-        borderRadius: '4px',
-
-        '@media': {
-          [breakpoints.lg]: {
-            borderRadius: '28px',
-
-            selectors: {
-              '&:hover': {
-                filter: 'brightness(105%)',
-              },
-              '&:active': {
-                filter: 'brightness(110%)',
-              },
-            },
-          },
-        },
-      },
-      false: {
-        color: globalVars.color.green200,
-        textShadow: '0px 4px 4px :color'.replace(
-          ':color',
-          globalVars.color.yellow100,
-        ),
-
-        fontWeight: 400,
       },
     },
   },
+  defaultVariants: {
+    isActive: false,
+  },
 });
 
-export const contentStyles = style({
-  gridColumn: 'span 2',
-  width: '100%',
+export const tabpanels = recipe({
+  variants: {
+    orientation: {
+      vertical: {},
+      horizontal: {
+        gridColumn: 'span 2',
+      },
+    },
+  },
+  defaultVariants: {
+    orientation: 'vertical',
+  },
 });
 
-export type TabsVariants = Extract<ContainerVariants, ListVariants>;
+type TabPanelsVariant = RecipeVariants<typeof tabpanels>;
+
+export type TabsVariant = Extract<
+  TabsContainerVariant,
+  TabListVariant | TabPanelsVariant
+>;
+
+export const tabpanel = recipe({});

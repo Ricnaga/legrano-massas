@@ -1,40 +1,52 @@
 'use client';
 
-import { PropsWithChildren, useMemo } from 'react';
-import { TabContentData, UseTabsProps, useTabs } from './hooks/useTabs';
-import { containerStyles, contentStyles, listStyles } from './tabs.css';
+import { PropsWithChildren, ReactNode, useState } from 'react';
+import {
+  container,
+  tab,
+  tablist,
+  tabpanel,
+  tabpanels,
+  TabsVariant,
+} from './tabs.css';
 
-interface TabsProps<T extends string = string> extends UseTabsProps<T> {}
+export type TabData = PropsWithChildren<{
+  id: string;
+  label: ReactNode;
+}>;
 
-export function Tabs<T extends string = string>(props: TabsProps<T>) {
-  const { trigger, triggerProps, data, orientation } = useTabs<T>(props);
+type TabsProps<D = TabData> = TabsVariant & {
+  items: Array<D>;
+  children?: (data: D) => ReactNode;
+};
 
-  const TriggerMemoized = (tab: TabContentData<T>) =>
-    useMemo(() => <div {...triggerProps(tab.id, tab.label)} />, [tab]);
+export function Tabs({ items, orientation = 'vertical', children }: TabsProps) {
+  const [trigger, setTrigger] = useState<string>(items.at(0)?.id || '');
 
-  const ContentMemoized = (
-    props: PropsWithChildren<Pick<TabContentData<T>, 'id'>>,
-  ) =>
-    useMemo(
-      () => <div className={contentStyles}>{props.children}</div>,
-      [props],
-    );
+  const filteredTabContent = items.find(
+    (item) => item.id === trigger,
+  ) as TabData;
+
+  const tabpanelContent = children
+    ? children(filteredTabContent)
+    : filteredTabContent.children;
 
   return (
-    <div className={containerStyles({ orientation })}>
-      <div className={listStyles({ orientation })}>
-        {data.map((tab) => (
-          <TriggerMemoized key={tab.id} id={tab.id} label={tab.label} />
+    <div className={container({ orientation })}>
+      <nav className={tablist({ orientation })}>
+        {items.map(({ id, label }) => (
+          <ul
+            key={id}
+            className={tab({ isActive: id === trigger })}
+            onClick={() => setTrigger(id)}
+          >
+            {label}
+          </ul>
         ))}
+      </nav>
+      <div className={tabpanels({ orientation })}>
+        <div className={tabpanel()}>{tabpanelContent}</div>
       </div>
-      {data.map(
-        (tab) =>
-          tab.id === trigger && (
-            <ContentMemoized id={tab.id} key={tab.id}>
-              {tab.children}
-            </ContentMemoized>
-          ),
-      )}
     </div>
   );
 }
