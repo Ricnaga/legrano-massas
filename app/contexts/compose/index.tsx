@@ -1,3 +1,4 @@
+/* eslint react/display-name: off */
 import { ComponentProps, FC, PropsWithChildren } from 'react';
 import { MenuProvider } from '../menu';
 
