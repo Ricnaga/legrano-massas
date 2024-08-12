@@ -1,7 +1,7 @@
+import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import { Karla } from 'next/font/google';
 import './application/theme/global.css';
-import { ComposeProviders } from './contexts/compose';
 import { Container } from './shared/components';
 import { Contacts, BottomBar } from './shared/components/@legrano';
 
@@ -15,6 +15,11 @@ export const metadata: Metadata = {
 type RootLayoutProps = {
   children: React.ReactNode;
 };
+
+const ComposeProviders = dynamic(
+  () => import('./contexts/compose').then((mod) => mod.ComposeProviders),
+  { ssr: false },
+);
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (

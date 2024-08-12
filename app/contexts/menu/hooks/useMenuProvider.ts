@@ -1,13 +1,6 @@
-import {
-  Dispatch,
-  PropsWithChildren,
-  ProviderProps,
-  SetStateAction,
-  useReducer,
-  useState,
-} from 'react';
-import { categories } from '../data';
 import { STORAGE_KEY } from '@/app/application/data/environment';
+import { Dispatch, PropsWithChildren, ProviderProps, useReducer } from 'react';
+import { categories } from '../data';
 
 export type MenuItems = {
   id: string;
