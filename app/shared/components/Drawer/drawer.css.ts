@@ -244,5 +244,6 @@ export const closeButtonStyles = recipe({
 export const contentStyles = recipe({
   base: {
     margin: '5rem 1rem 1rem',
+    height: 'calc(100% - 6rem)',
   },
 });

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from '../../../icons';
-import { containerStyles, linkStyles } from './contacts.css';
+import { containerStyles, linkName, linkStyles } from './contacts.css';
 
 export const contactItems = [
   {
@@ -33,7 +33,7 @@ export function Contacts() {
           href={item.href}
           target="_blank"
         >
-          {item.children} {item.name}
+          {item.children} <span className={linkName()}>{item.name}</span>
         </Link>
       ))}
     </div>

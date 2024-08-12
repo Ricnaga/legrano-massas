@@ -70,6 +70,7 @@ export const descriptionStyles = style({
     background: globalVars.color.yellow200,
     borderRadius: '8px',
   },
+  marginBottom: '8rem',
 
   '@media': {
     [breakpoints.lg]: {

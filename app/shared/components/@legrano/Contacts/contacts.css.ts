@@ -27,8 +27,7 @@ const FACEBOOK_COLOR = '#1877F2';
 export const linkStyles = recipe({
   base: [
     {
-      transition: 'all',
-      transitionDuration: '0.2s',
+      transition: 'all 100ms ease',
 
       ':first-of-type': {
         gridColumn: '1',
@@ -43,11 +42,6 @@ export const linkStyles = recipe({
 
       background: globalVars.color.white200,
       padding: '1rem',
-
-      fontSize: '1.2rem',
-      fontWeight: 700,
-      fontVariant: 'small-caps',
-      lineHeight: '1rem',
 
       ':hover': {
         boxShadow: '0px 0px 4px 8px :color'.replace(
@@ -95,6 +89,22 @@ export const linkStyles = recipe({
         ':hover': {
           background: FACEBOOK_COLOR,
         },
+      },
+    },
+  },
+});
+
+export const linkName = recipe({
+  base: {
+    display: 'none',
+    '@media': {
+      [breakpoints.lg]: {
+        display: 'flex',
+
+        fontSize: '1.2rem',
+        fontWeight: 700,
+        fontVariant: 'small-caps',
+        lineHeight: '1rem',
       },
     },
   },

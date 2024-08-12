@@ -6,6 +6,7 @@ export const container = recipe({
     {
       height: '100%',
       display: 'flex',
+      justifyContent: 'space-between',
       flexDirection: 'column',
       gap: '1rem',
     },
