@@ -59,7 +59,7 @@ export const useItemCard = () => {
     )}`.replace(/,/g, '')}
     %0ATotal: ${totalPrice}`;
 
-  const href = `location.href='${contactItems[0].href}?text=${whatsAppText}'`;
+  const href = `${contactItems[0].href}?text=${whatsAppText}`;
 
   const onAmount = ({ action, ...payload }: OnAmountParams) =>
     dispatch({
