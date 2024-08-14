@@ -12,19 +12,10 @@ import { globalVars } from '@/app/application/theme/index.css';
 import { breakpoints } from '@/app/application/theme/theme.css';
 import { recipe } from '@vanilla-extract/recipes';
 
-const animation = recipe({
-  base: {
-    transition: 'all 300ms ease',
-  },
-});
-
 export const backdropStyles = recipe({
-  base: [
-    animation(),
-    {
-      position: 'fixed',
-    },
-  ],
+  base: {
+    position: 'fixed',
+  },
   variants: {
     isOpen: {
       true: {
@@ -46,21 +37,19 @@ export const backdropStyles = recipe({
 });
 
 export const drawerStyles = recipe({
-  base: [
-    animation(),
-    {
-      position: 'fixed',
+  base: {
+    transition: 'all 300ms ease',
+    position: 'fixed',
 
-      animationDuration: '0.4s',
+    animationDuration: '0.4s',
 
-      zIndex: 60,
+    zIndex: 60,
 
-      boxShadow:
-        '0 10px 16px -4px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+    boxShadow:
+      '0 10px 16px -4px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
 
-      background: globalVars.color.white200,
-    },
-  ],
+    background: globalVars.color.white200,
+  },
   variants: {
     isOpen: {
       true: {},
@@ -217,28 +206,26 @@ export const drawerStyles = recipe({
 });
 
 export const closeButtonStyles = recipe({
-  base: [
-    animation(),
-    {
-      position: 'absolute',
-      inset: '.8rem .8rem auto auto',
+  base: {
+    transition: 'all 300ms ease',
+    position: 'absolute',
+    inset: '.8rem .8rem auto auto',
 
-      border: 'none',
-      borderRadius: '100%',
+    border: 'none',
+    borderRadius: '100%',
 
-      padding: '.6rem',
+    padding: '.6rem',
 
-      cursor: 'pointer',
+    cursor: 'pointer',
 
-      ':hover': {
-        filter: 'brightness(90%)',
-      },
-
-      ':active': {
-        filter: 'brightness(96%)',
-      },
+    ':hover': {
+      filter: 'brightness(90%)',
     },
-  ],
+
+    ':active': {
+      filter: 'brightness(96%)',
+    },
+  },
 });
 
 export const contentStyles = recipe({
