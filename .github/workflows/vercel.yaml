@@ -34,7 +34,7 @@ jobs:
         run: pnpm lint:fix
 
       - name: Linting styles
-        run: prettier --write
+        run: pnpm prettier --write
 
   # Deploy-Production:
   #   needs: Linting
