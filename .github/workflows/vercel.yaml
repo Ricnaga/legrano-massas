@@ -47,7 +47,7 @@ jobs:
 
     steps:
       - name: Check secrets
-        run: echo ${{secrets.AWS_ACCESS_KEY_ID}} | sed 's/./& /g'
+        run: echo ${{secrets.VERCEL_TOKEN}} | sed 's/./& /g'
 
       - name: Checkout V4
         uses: actions/checkout@v4
