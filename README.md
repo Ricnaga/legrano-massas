@@ -22,6 +22,8 @@
 - [Nextjs](https://nextjs.org/)
 - [Localstorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage) - Armazenamento de dados do carrinho
 - [Vanilla extract](https://vanilla-extract.style/) - Estilização de components
+- [Github Actions](https://docs.github.com/en/actions) - Execucao de CI/CD
+- [Vercel](https://vercel.com/) - Build/Deploy da aplicação
 
 ## <div align="center">Requisitos</div>
 
