@@ -199,7 +199,7 @@ export const drawerStyles = recipe({
         side: 'bottom',
       },
       style: {
-        animation: slideOutFromBottom,
+        animation: slideInFromBottom,
       },
     },
   ],
