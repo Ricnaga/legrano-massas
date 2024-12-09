@@ -59,3 +59,5 @@ $ yarn test (ou npm run test)
 ## <div align="center">Demonstração</div>
 
 ### <div align="center"> [https://legranomassas.netlify.app](https://legranomassas.netlify.app/)</div>
+
+### Esse site também foi feito em nextJS, confira aqui [Legrano - nextjs](https://github.com/Ricnaga/legrano-massas/tree/feature/nextjs)
